@@ -1,5 +1,3 @@
-
-<<<<<<< HEAD
 <?php 
  include("Header.php");
 ?>
@@ -20,10 +18,5 @@
 <?php
 include("Footer.php");
 ?>
-=======
-je rajoute ça
-=======
 
-bonjour je suis pierre
->>>>>>> 9df67a39c1d7b16eb88ec82b5894117396bb9dcb
 
