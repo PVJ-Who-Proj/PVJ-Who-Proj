@@ -4,31 +4,9 @@
 	<body>
 		<section>
 			<img id="logo" src="./Ressources/img/logo_guess_who.png">
-			<p>tube</p>
-			<p>tube</p>
-			<p>tube</p>
-			<p>tube</p>
-			<p>tube</p>
-			<p>tube</p>
-			<p>tube</p>
-			<p>tube</p>
-			<p>tube</p>
-			<p>tube</p>
-			<p>tube</p>
-			<p>tube</p>
-			<p>tube</p>
-			<p>tube</p>
-			<p>tube</p>
-			<p>tube</p>
-			<p>tube</p>
-			<p>tube</p>
-			<p>tube</p>
-			<p>tube</p>
-			<p>tube</p>
-			<p>tube</p>
-			<p>tube</p>
-			<p>tube</p>
-			<p>tube</p>
+
+			<img id="paneau" src="./Ressources/img/paneau.png">
+
 		</section>
 	</body>
 <?php

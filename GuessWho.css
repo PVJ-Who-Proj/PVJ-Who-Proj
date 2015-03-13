@@ -15,4 +15,9 @@ section p{
 
 #logo{
 	margin-top: 2%;
+	vertical-align: top;
+}
+
+#paneau{
+	margin-top: 250px;
 }
