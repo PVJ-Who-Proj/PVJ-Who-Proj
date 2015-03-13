@@ -1,3 +1,14 @@
 body{
+	margin: 0px;
+}
+
+section{
 	background-image: url(./Ressources/img/Background.png);
+	width: 60%;
+	height: auto;
+	margin: auto;
+}
+
+section p{
+	margin: 0px;
 }
