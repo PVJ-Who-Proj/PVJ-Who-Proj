@@ -4,11 +4,15 @@ body{
 
 section{
 	background-image: url(./Ressources/img/Background.png);
-	width: 60%;
+	width: 1000px;
 	height: auto;
 	margin: auto;
 }
 
 section p{
 	margin: 0px;
+}
+
+#logo{
+	margin-top: 2%;
 }
