@@ -1,23 +1,39 @@
 body{
-	margin: 0px;
+	font-family: 'Lobster Two', cursive;
 }
-
-section{
-	background-image: url(./Ressources/img/Background.png);
-	width: 1000px;
-	height: auto;
+body{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.integral{
+	background-image: url(Ressources/img/Background.png);
 	margin: auto;
+	width: 800px;
+	height: 900px;
 }
 
-section p{
-	margin: 0px;
+.logo{
+	padding-top: 20px;
+	display: inline-block;
 }
 
-#logo{
-	margin-top: 2%;
-	vertical-align: top;
+.help{
+	display: inline-block;
 }
 
-#paneau{
-	margin-top: 250px;
+.welcome{
+	padding-top: 50px;
+	padding-left: 150px;
+	position: relative;
+}
+
+.welcome div{
+	position: absolute;
+	padding-top: 100px;
+}
+.welcome_para{
+	margin-left: 60px;
+	margin-right: 230px;
+	color: black;
+	font-size: 25px;
 }
