@@ -1,7 +1,9 @@
 body{
-	font-family: 'Lobster Two', cursive;
+	
 }
 body{
+	font-family: 'Lobster Two', cursive;
+	color: #B68750;
 	margin-top: 0px;
 	margin-bottom: 0px;
 }
@@ -34,13 +36,50 @@ body{
 .welcome_para{
 	margin-left: 60px;
 	margin-right: 230px;
-	color: black;
+	
 	font-size: 25px;
 }
 
-#welcome_next_butt{
+.next_butt{
 	padding-left: 200px;
 }
-#welcome_next_butt:hover{
+.next_butt:hover{
 	opacity: 0.8;
+}
+
+.next_back_butt{
+	padding-left: 65px;
+}
+
+.liste_acceuil{
+	margin-bottom: 10px;
+	margin-left: 35px; 
+	list-style-type: none;
+	text-align: center;
+	font-size: 35px;
+}
+
+#login_liste_acceuil{
+	border-top: 1px solid #B68750;
+}
+.liste_acceuil li{
+	padding: 15px 10px 15px 10px;
+	border-bottom: solid 1px #B68750;
+}
+.liste_acceuil a{
+	text-decoration: none;
+	color: #B68750;
+}
+
+.liste_acceuil li:hover{
+	background-color: #B68750;
+	transition: 0.35s linear;
+	
+}
+.liste_acceuil li:hover {
+	color: #F8E8B0;
+	transition: 0.35s linear;
+}
+.small_back_butt{
+	margin-left: 40px;
 }
