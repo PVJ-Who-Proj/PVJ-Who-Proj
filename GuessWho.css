@@ -9,7 +9,7 @@ body{
 	background-image: url(Ressources/img/Background.png);
 	margin: auto;
 	width: 800px;
-	height: 900px;
+	height: 955px;
 }
 
 .logo{
@@ -36,4 +36,11 @@ body{
 	margin-right: 230px;
 	color: black;
 	font-size: 25px;
+}
+
+#welcome_next_butt{
+	padding-left: 200px;
+}
+#welcome_next_butt:hover{
+	opacity: 0.8;
 }
