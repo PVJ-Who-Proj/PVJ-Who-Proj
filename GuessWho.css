@@ -10,12 +10,11 @@ body{
 .integral{
 	background-image: url(Ressources/img/Background.png);
 	margin: auto;
-	width: 800px;
+	width: 1670px;
 	height: 955px;
 }
 
 .logo{
-	padding-top: 20px;
 	display: inline-block;
 }
 
@@ -24,24 +23,25 @@ body{
 }
 
 .welcome{
-	padding-top: 50px;
-	padding-left: 150px;
+	padding-left: 300px;
 	position: relative;
 }
 
 .welcome div{
 	position: absolute;
-	padding-top: 100px;
+}
+.welcome_pad{
+	padding-top:100px;
 }
 .welcome_para{
-	margin-left: 60px;
-	margin-right: 230px;
-	
-	font-size: 25px;
+	margin-left: 110px;
+	margin-right: 400px;
+	text-align: center;
+	font-size: 55px;
 }
 
 .next_butt{
-	padding-left: 200px;
+	padding-left: 900px;
 }
 .next_butt:hover{
 	opacity: 0.8;
@@ -50,13 +50,16 @@ body{
 .next_back_butt{
 	padding-left: 65px;
 }
+/********************************************************/
 
 .liste_acceuil{
-	margin-bottom: 10px;
-	margin-left: 35px; 
+	margin-bottom: 70px;
+	margin-left: 250px; 
+	margin-top: 100px;
+	padding-top: 100px;
 	list-style-type: none;
 	text-align: center;
-	font-size: 35px;
+	font-size: 55px;
 }
 
 #login_liste_acceuil{
@@ -73,13 +76,105 @@ body{
 
 .liste_acceuil li:hover{
 	background-color: #B68750;
-	transition: 0.35s linear;
+	transition: 0.45s linear;
 	
 }
 .liste_acceuil li:hover {
 	color: #F8E8B0;
-	transition: 0.35s linear;
+	transition: 0.45s linear;
 }
-.small_back_butt{
-	margin-left: 40px;
+.back_butt{
+	margin-left: 80px;
 }
+.back_butt:hover{
+	opacity: 0.8;
+}
+
+/********************************************************/
+
+.espace_login{
+	padding-top: 100px;
+	margin-left: 290px;
+	font-size: 35px;
+}
+.new_compte{
+	margin-top: 20px;
+	margin-left: 305px;
+	padding-bottom: 0px;
+	padding-top: 100px;
+}
+.title_login{
+	text-align: center;
+}
+
+.form_compte input{
+	display: block;
+	background: none;
+	border: 1px solid #B68750;
+	margin-bottom: 50px;
+}
+.form_compte input[type="text"], input[type="password"], input[type="email"]{
+padding-left: 20px;
+color: #B68750;
+font-size: 35px;
+height: 80px;
+width: 480px;
+box-shadow: 0 0 15px 2px;
+}
+
+.form_compte input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus{
+	background-color: #B68750;
+	color: #F8E8B0;
+}
+
+
+input::-webkit-input-placeholder{
+	color: #B68750;
+}
+input:focus::-webkit-input-placeholder{
+	color:#F8E8B0;
+}
+
+.form_compte input[type="password"], input[type="email"], input[type="text"],  select{
+	outline:none;
+}
+
+.form_compte input[type="submit"]{
+	cursor: pointer;
+	width: 210px;
+	height: 70px;
+	border: none;
+	
+}
+.form_creation_compte input[type="submit"]{
+	margin-left: 130px;
+	background: url("Ressources/img/create.png");
+}
+.form_login input[type="submit"]{
+
+	margin-left: 70px;
+	background: url("Ressources/img/login_butt.png");
+}
+
+.back_butt_login{
+	margin-left: 0px;
+}
+.back_butt_block input{
+	display: inline-block;
+}
+
+/********************************************************/
+
+.form_creation_compte input{
+	margin-left: 
+}
+.mauvais_mdp{
+	margin-top: -35px;
+	color: red;
+	font-size: 25px;
+}
+.mauvais_log{
+	padding-top: 90px;
+	color: red;
+}
+

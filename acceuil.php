@@ -1,15 +1,18 @@
 <?php
-include("Header.php")
+include("Header.php");
+$_SESSION['mdp_correct'] = true;
+$_SESSION['login_pris'] =false;
 ?>
+
 <div class="welcome">
 	<div>
 		<ol class="liste_acceuil">
-			<a href="">
+			<a href="login.php">
 				<li id="login_liste_acceuil">
 					Login!
 				</li>
 			</a>
-			<a href="">
+			<a href="creation_compte.php">
 				<li>
 					Create your own account!
 				</li>
@@ -25,7 +28,7 @@ include("Header.php")
 				</li>
 			</a>
 		</ol>
-		<a class="small_back_butt" href="index.php"><img  src="Ressources/img/small_back.png"></a>
+		<a class="back_butt" href="index.php"><img  src="Ressources/img/back.png"></a>
 	</div>
 
 	<img src="Ressources/img/before.png">
