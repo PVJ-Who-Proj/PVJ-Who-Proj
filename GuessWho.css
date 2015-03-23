@@ -9,8 +9,7 @@ body{
 }
 .integral{
 	background-image: url(Ressources/img/Background.png);
-	margin: auto;
-	width: 1670px;
+	background-image: repeat-x;
 	height: 955px;
 }
 
@@ -23,7 +22,8 @@ body{
 }
 
 .welcome{
-	padding-left: 300px;
+	width: 1081px;
+	margin: auto;
 	position: relative;
 }
 
@@ -34,8 +34,8 @@ body{
 	padding-top:100px;
 }
 .welcome_para{
-	margin-left: 110px;
-	margin-right: 400px;
+	margin: auto;
+	padding: 120px 50px 30px 50px;
 	text-align: center;
 	font-size: 55px;
 }
@@ -158,6 +158,9 @@ input:focus::-webkit-input-placeholder{
 
 .back_butt_login{
 	margin-left: 0px;
+}
+.back_butt_block input[type="submit"]:hover, a:hover{
+	opacity: 0.8;
 }
 .back_butt_block input{
 	display: inline-block;

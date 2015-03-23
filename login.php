@@ -9,7 +9,7 @@ include("Header.php")
 
 			<form class="form_compte form_login" action="login_test.php" Method ="POST">
 
-			<input type ="text" name ="login" placeholder="User Name">
+			<input type ="text" name ="login" placeholder="User Name" autocomplete="off">
 			<div class="mauvais_log">
 				<?php
 				if($_SESSION['id_juste'] == false)
