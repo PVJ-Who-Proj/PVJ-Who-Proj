@@ -12,20 +12,17 @@ body{
 	background-image: repeat-x;
 	height: 955px;
 }
-
 .logo{
 	display: inline-block;
 }
 .help{
 	display: inline-block;
 }
-
 .welcome{
 	width: 1081px;
 	margin: auto;
 	position: relative;
 }
-
 .welcome div{
 	position: absolute;
 }
@@ -38,7 +35,6 @@ body{
 	text-align: center;
 	font-size: 55px;
 }
-
 .next_butt{
 	padding-left: 900px;
 }
@@ -52,8 +48,6 @@ body{
 .next_butt:hover img{
 	box-shadow: 0px 0px 0px 0px;
 }
-
-
 .next_back_butt{
 	padding-left: 65px;
 }
@@ -68,7 +62,6 @@ body{
 	text-align: center;
 	font-size: 55px;
 }
-
 #login_liste_acceuil{
 	border-top: 1px solid #B68750;
 }
@@ -80,11 +73,9 @@ body{
 	text-decoration: none;
 	color: #B68750;
 }
-
 .liste_acceuil li:hover{
 	background-color: #B68750;
 	transition: 0.45s linear;
-	
 }
 .liste_acceuil li:hover {
 	color: #F8E8B0;
@@ -92,18 +83,11 @@ body{
 }
 .back_butt{
 	margin-left: 80px;
-
-
 }
 .back_butt img{
-
 	box-shadow: 0 0 25px 2px #B68750;
 	border-radius: 40px;
 }
-.back_butt img:hover{
-	
-}
-
 .back_butt:hover{
 	opacity: 0.5;
 }
@@ -127,7 +111,6 @@ body{
 .title_login{
 	text-align: center;
 }
-
 .form_compte input{
 	display: block;
 	background: none;
@@ -143,36 +126,43 @@ height: 80px;
 width: 480px;
 box-shadow: 0 0 15px 2px;
 }
-
-
 .form_compte input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="date"]:focus{
 	background-color: #B68750;
 	color: #F8E8B0;
 }
-
-input[type=date]::-webkit-inner-spin-button, 
-input[type=date]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+input[type=date]::-webkit-calendar-picker-indicator:hover{ 
+	cursor:pointer;
 }
-
+.form_compte input[type="date"]::-webkit-calendar-picker-indicator:hover{
+	background-color: #B68750;
+	color:#F8E8B0;
+}
+.form_compte input[type="date"]:focus::-webkit-calendar-picker-indicator:hover{
+	background-color: #F8E8B0;
+	color:#B68750;
+}
+.form_compte input[type=date]::-webkit-clear-button{
+	cursor: pointer;
+	margin-right: 10px;
+}
+input[type=date]::-webkit-inner-spin-button, input[type=date]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0px; 
+}
 input::-webkit-input-placeholder{
 	color: #B68750;
 }
 input:focus::-webkit-input-placeholder{
 	color:#F8E8B0;
 }
-
 .form_compte input[type="password"], input[type="email"], input[type="text"], input[type="date"],  select{
 	outline:none;
 }
-
 .form_compte input[type="submit"]{
 	cursor: pointer;
 	width: 210px;
 	height: 70px;
 	border: none;
-	
 }
 .form_creation_compte{
 	float: left;
@@ -182,11 +172,9 @@ input:focus::-webkit-input-placeholder{
 	background: url("Ressources/img/create.png");
 }
 .form_login input[type="submit"]{
-
 	margin-left: 70px;
 	background: url("Ressources/img/login_butt.png");
 }
-
 .back_butt_login{
 	margin-left: 0px;
 }
