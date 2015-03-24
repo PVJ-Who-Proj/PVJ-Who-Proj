@@ -19,11 +19,11 @@ if($password <> $confirm)
 else
 {
 
-	$req = $bdd->prepare('INSERT INTO utilisateur(login, password, adr_mail) VALUES(:login, :password, :adr_mail)');
+	$req = $bdd->prepare('INSERT INTO USER(login_user, password_user, email_user) VALUES(:login_user, :password_user, :email_user');
 	$req->execute(array(
-		'login'=> $login,
-		'password' => $password,
-		'adr_mail' => $adr_mail
+		'login_user'=> $login,
+		'password_user' => $password,
+		'email_user' => $adr_mail
 		));
 
 	mail('clayette.pierre@gmail.com' , 'Thanks for the register!', 'Thanks for the register!!', 'From: clayette.pierre@gmail.com');

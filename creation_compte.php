@@ -12,7 +12,6 @@ include("Header.php")
 			
 			<input type="password" name="confirm_mdp" placeholder="Confirm password" style="width:450px">
 			<input  type="email" name="adr_mail" placeholder="Email" style="width:450px" autocomplete="off">
-			<input  type="date" name="date_naiss" placeholder="test" style="width:450px" autocomplete="off">
 			<div class="mauvais_mdp">
 				<?php
 				if($_SESSION['mdp_correct'] == false)

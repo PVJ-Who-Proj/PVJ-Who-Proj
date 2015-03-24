@@ -13,9 +13,9 @@ $reponse = $bdd->query('SELECT login, password FROM utilisateur');
 
 while($donnees = $reponse->fetch())
 {
-	if($donnees['login'] == $_POST['login'])
+	if($donnees['login_user'] == $_POST['login'])
 	{
-		if($donnees['password'] == $_POST['password'])
+		if($donnees['password_user'] == $_POST['password'])
 		{
 			$_SESSION['login'] = $_POST['login'];
 			$_SESSION['id_juste'] = true;
