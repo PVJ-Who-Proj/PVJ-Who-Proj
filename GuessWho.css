@@ -126,52 +126,17 @@ height: 80px;
 width: 480px;
 box-shadow: 0 0 15px 2px;
 }
-<<<<<<< HEAD
-.form_compte input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="date"]:focus{
-	background-color: #B68750;
-	color: #F8E8B0;
-}
-input[type=date]::-webkit-calendar-picker-indicator:hover{ 
-	cursor:pointer;
-}
-.form_compte input[type="date"]::-webkit-calendar-picker-indicator:hover{
-	background-color: #B68750;
-	color:#F8E8B0;
-}
-.form_compte input[type="date"]:focus::-webkit-calendar-picker-indicator:hover{
-	background-color: #F8E8B0;
-	color:#B68750;
-}
-.form_compte input[type=date]::-webkit-clear-button{
-	cursor: pointer;
-	margin-right: 10px;
-}
-input[type=date]::-webkit-inner-spin-button, input[type=date]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0px; 
-}
-=======
-
-
 .form_compte input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus{
 	background-color: #B68750;
 	color: #F8E8B0;
 }
-
-
->>>>>>> origin/master
 input::-webkit-input-placeholder{
 	color: #B68750;
 }
 input:focus::-webkit-input-placeholder{
 	color:#F8E8B0;
 }
-<<<<<<< HEAD
-.form_compte input[type="password"], input[type="email"], input[type="text"], input[type="date"],  select{
-=======
-
 .form_compte input[type="password"], input[type="email"], input[type="text"],  select{
->>>>>>> origin/master
 	outline:none;
 }
 .form_compte input[type="submit"]{
