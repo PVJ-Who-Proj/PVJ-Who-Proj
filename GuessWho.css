@@ -133,9 +133,10 @@ body{
 	display: block;
 	background: none;
 	border: 1px solid #B68750;
-	margin-bottom: 50px;
+	border-radius: 20px;
+	margin-bottom: 20px;
 }
-.form_compte input[type="text"], input[type="password"], input[type="email"]{
+.form_compte input[type="text"], input[type="password"], input[type="email"], input[type="date"]{
 padding-left: 20px;
 color: #B68750;
 font-size: 35px;
@@ -144,11 +145,17 @@ width: 480px;
 box-shadow: 0 0 15px 2px;
 }
 
-.form_compte input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus{
+
+.form_compte input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="date"]:focus{
 	background-color: #B68750;
 	color: #F8E8B0;
 }
 
+input[type=date]::-webkit-inner-spin-button, 
+input[type=date]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
 
 input::-webkit-input-placeholder{
 	color: #B68750;
@@ -157,7 +164,7 @@ input:focus::-webkit-input-placeholder{
 	color:#F8E8B0;
 }
 
-.form_compte input[type="password"], input[type="email"], input[type="text"],  select{
+.form_compte input[type="password"], input[type="email"], input[type="text"], input[type="date"],  select{
 	outline:none;
 }
 
@@ -167,6 +174,9 @@ input:focus::-webkit-input-placeholder{
 	height: 70px;
 	border: none;
 	
+}
+.form_creation_compte{
+	float: left;
 }
 .form_creation_compte input[type="submit"]{
 	margin-left: 130px;
