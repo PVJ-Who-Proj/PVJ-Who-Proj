@@ -2,9 +2,10 @@
 include("Header.php");
 $_SESSION['mdp_correct'] = true;
 $_SESSION['login_pris'] =false;
+$_SESSION['id_juste'] = true;
 ?>
 
-<div class="welcome">
+<div class="welcome" id="background_before">
 	<div>
 		<ol class="liste_acceuil">
 			<a href="login.php">
@@ -17,7 +18,7 @@ $_SESSION['login_pris'] =false;
 					Create your own account!
 				</li>
 			</a>
-			<a href="">
+			<a href="ranking.php">
 				<li>
 					Check ranking
 				</li>
@@ -31,7 +32,6 @@ $_SESSION['login_pris'] =false;
 		<a class="back_butt" href="index.php"><img  src="Ressources/img/back.png"></a>
 	</div>
 
-	<img src="Ressources/img/before.png">
 </div>
 
 

@@ -8,7 +8,7 @@ session_start();
 include("bdd.php");
 $_SESSION['id_juste'] = false;
 
-$reponse = $bdd->query('SELECT login, password FROM utilisateur');
+$reponse = $bdd->query('SELECT login_user, password_user FROM user');
 
 
 while($donnees = $reponse->fetch())
@@ -19,7 +19,7 @@ while($donnees = $reponse->fetch())
 		{
 			$_SESSION['login'] = $_POST['login'];
 			$_SESSION['id_juste'] = true;
-			header('Location: acceuil.php');
+			header('Location: accueil_partie.php');
 			
 		}
 

@@ -13,22 +13,58 @@ body{
 	height: 955px;
 }
 
-.logo{
-	display: inline-block;
+.logo img{
+	display: inline;
 }
+.haut_page{
+	height: 130px;
+}
+.img_logo{
+	display: inline;
+}
+
+.deco_butt {
+	margin-left: 1200px;
+	background: url("Ressources/img/yellow_logout_butt.png");
+	width: 210px;
+	height: 69px;
+	border-radius: 40px;
+	margin-top: -30px;
+	border: none;
+}
+
 .help{
 	display: inline-block;
 }
 
 .welcome{
+
 	width: 1081px;
+	height: 773px;
 	margin: auto;
 	position: relative;
 }
-
-.welcome div{
-	position: absolute;
+#background_before{
+	background-image: url(Ressources/img/before.png);
 }
+#background_index{
+	background-image: url(Ressources/img/welcome.png);
+}
+#background_login{
+	background-image: url(Ressources/img/login.png);
+}
+#background_create{
+	background-image: url(Ressources/img/compte.png);
+}
+#background_rank{
+	background-image: url(Ressources/img/ranking.png);
+}
+#background_menu{
+	background-image: url(Ressources/img/menu.png);
+}
+
+
+
 .welcome_pad{
 	padding-top:100px;
 }
@@ -60,14 +96,13 @@ body{
 /********************************************************/
 
 .liste_acceuil{
-	margin-bottom: 70px;
-	margin-left: 250px; 
-	margin-top: 100px;
-	padding-top: 100px;
+
+	padding-top: 210px;
 	list-style-type: none;
 	text-align: center;
 	font-size: 55px;
 }
+
 
 #login_liste_acceuil{
 	border-top: 1px solid #B68750;
@@ -75,6 +110,8 @@ body{
 .liste_acceuil li{
 	padding: 15px 10px 15px 10px;
 	border-bottom: solid 1px #B68750;
+	margin: auto;
+	width: 600px;
 }
 .liste_acceuil a{
 	text-decoration: none;
@@ -115,20 +152,25 @@ body{
 
 .espace_login{
 	padding-top: 100px;
-	margin-left: 290px;
+	margin: auto;
 	font-size: 35px;
 }
 .new_compte{
+	margin: auto;
+	width: 472px;
 	margin-top: 20px;
-	margin-left: 305px;
 	padding-bottom: 0px;
-	padding-top: 100px;
+	padding-top: 104px;
+}
+.form_compte{
+	margin: auto;
 }
 .title_login{
 	text-align: center;
 }
 
 .form_compte input{
+	margin: auto;
 	display: block;
 	background: none;
 	border: 1px solid #B68750;
@@ -169,11 +211,9 @@ input:focus::-webkit-input-placeholder{
 	border: none;
 	
 }
-.form_creation_compte{
-	float: left;
-}
+
 .form_creation_compte input[type="submit"]{
-	margin-left: 130px;
+	margin-left: 70px;
 	background: url("Ressources/img/create.png");
 }
 .form_login input[type="submit"]{
@@ -181,6 +221,7 @@ input:focus::-webkit-input-placeholder{
 	margin-left: 70px;
 	background: url("Ressources/img/login_butt.png");
 }
+
 
 .back_butt_login{
 	margin-left: 0px;
@@ -196,6 +237,13 @@ input:focus::-webkit-input-placeholder{
 	box-shadow: 0px 0px 0px 0px;
 }
 
+
+
+.back_butt_block{
+	margin: auto;
+	height: 68px;
+	width: 360px;
+}
 .back_butt_block input{
 	display: inline-block;
 	border-radius: 20px;
@@ -208,16 +256,129 @@ input:focus::-webkit-input-placeholder{
 
 /********************************************************/
 
-.form_creation_compte input{
-	margin-left: 
-}
+
 .mauvais_mdp{
-	margin-top: -35px;
+	padding-top: 8px;
+	width: 230px;
+	margin: auto;
 	color: red;
 	font-size: 25px;
 }
 .mauvais_log{
-	padding-top: 90px;
+	padding-top: 10px;
 	color: red;
+	width: 380px;
+	margin: auto;
 }
 
+
+/*********************************************************/
+
+
+.classement_tableau{
+	margin: auto;
+	padding-top: 100px
+}
+.haut_tableau{
+	font-size: 30px;
+	height: 90px;
+}
+
+.ligne_tableau{
+	font-size: 25px;
+	height: 50px;
+}
+
+.classement_tableau th{
+	width: 300px;
+}
+.tableau{
+	height: 670px;
+}
+ #back_rank{
+	margin-left: 70px;
+}
+
+
+/**********************************************************/
+
+.entour_menu{
+	margin: auto;
+	padding-top: 140px;
+	height: 645px;
+	width: 1020px;
+}
+
+
+#create_game{
+	font-size: 80px;
+	margin-top: 75px;
+	margin-left: 20px;
+	text-decoration: none;
+	padding: 30px 280px 30px 275px;
+	color: #B68750;
+	background-color: #faeec7;
+	border: 3px solid #B68750;
+	-webkit-transition-property: all;
+	-webkit-transition-duration: 0.8s;
+}
+
+#create_game:hover{
+	background-color: #B68750;
+	color: #faeec7;
+}
+
+#previous_game{
+	display: inline;
+	word-wrap: break-word;
+	font-size: 50px;
+	margin-left: 20px;
+	text-align: center;
+	width: 400px;
+	height: 200px;
+	margin-top: 50px;
+	margin-right: 170px;
+	padding-top: 40px;
+	padding-bottom: 51px;
+	text-decoration: none;
+	color: #B68750;
+	border: 3px solid #B68750;
+	-webkit-transition-property: all;
+	-webkit-transition-duration: 0.8s;
+	background-color: #faeec7;
+}
+#previous_game:hover{
+	background-color: #B68750;
+	color: #faeec7;
+}
+
+#running_games{
+	font-size: 80px;
+	text-decoration: none;
+	float: right;
+	width: 400px;
+	text-align: center;
+	margin-top: 55px;
+	margin-right: 18px;
+	margin-bottom: 10px;
+	padding-top: 50px;
+	padding-bottom: 37px;
+	color: #B68750;
+	border: 3px solid #B68750;
+	-webkit-transition-property: all;
+	-webkit-transition-duration: 0.8s;
+	background-color: #faeec7;
+}
+
+#running_games:hover{
+	background-color: #B68750;
+	color: #faeec7;
+
+}
+
+#join_game{
+	font-size: 80px;
+	text-decoration: none;
+	margin-top: 50px;
+	margin-left: 250px;
+}

@@ -1,5 +1,8 @@
+<?php
+session_start();
+include("bdd.php");
+?>
 <!doctype html>
-<?php session_start(); ?>
 <html>
 	<head>
 		<meta charset="utf-8"/>
@@ -10,9 +13,25 @@
 	</head>
 	<body>
 		<section class="integral">
-			<div class="logo">
-				<img src="Ressources/img/Logo_Guess_Who.png">
+			<div class="haut_page">
+				<div class="logo">
+					<img id="img_logo" src="Ressources/img/Logo_Guess_Who.png">
+					<?php
+					if( $_SESSION['login'] == true )
+					{
+						?>
+						<form action="deco.php">
+							<input class="deco_butt" type="submit" value="">
+						</form>
+						<?php
+					}
+
+					?>
+				</div>
 			</div>
+
+			
+
 
 			
 

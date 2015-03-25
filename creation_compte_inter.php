@@ -19,19 +19,19 @@ if($password <> $confirm)
 else
 {
 
-	$req = $bdd->prepare('INSERT INTO USER(login_user, password_user, email_user) VALUES(:login_user, :password_user, :email_user');
+	$req = $bdd->prepare('INSERT INTO user(login_user, password_user, email_user) VALUES(:login_user, :password_user, :email_user)');
 	$req->execute(array(
 		'login_user'=> $login,
 		'password_user' => $password,
 		'email_user' => $adr_mail
 		));
 
-	mail('clayette.pierre@gmail.com' , 'Thanks for the register!', 'Thanks for the register!!', 'From: clayette.pierre@gmail.com');
-
-
-	header('Location: acceuil.php');
-
+	
 }
+$_SESSION['login'] = true;
+
+	header('Location: accueil_partie.php');
+
 
 
 
