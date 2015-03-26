@@ -1,6 +1,7 @@
 <?php
- include("Header.php");
- $_SESSION['login'] = true;
+include("Header.php");
+
+
  ?>
 
 
