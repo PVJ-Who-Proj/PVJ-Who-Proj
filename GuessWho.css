@@ -278,18 +278,21 @@ input:focus::-webkit-input-placeholder{
 
 .entour_menu{
 	margin: auto;
-	padding-top: 140px;
+	padding-top: 110px;
 	height: 645px;
 	width: 1020px;
 }
 
 
 #create_game{
+	display: inline-block;
 	font-size: 80px;
-	margin-top: 75px;
+	text-align: center;
 	margin-left: 20px;
 	text-decoration: none;
-	padding: 30px 280px 30px 275px;
+	width:976px;
+	height:130px;
+	padding-top: 20px;
 	color: #B68750;
 	background-color: #faeec7;
 	border: 3px solid #B68750;
@@ -301,53 +304,63 @@ input:focus::-webkit-input-placeholder{
 	background-color: #B68750;
 	color: #faeec7;
 }
-
-#previous_game{
-	display: inline;
-	word-wrap: break-word;
-	font-size: 50px;
+.taillecube{
+	margin-top: 10px;
+	padding-top: 25px;
+	width:350px;
+	height:280px;
 	margin-left: 20px;
-	text-align: center;
-	width: 400px;
-	height: 200px;
-	margin-top: 50px;
-	margin-right: 170px;
-	padding-top: 40px;
-	padding-bottom: 51px;
-	text-decoration: none;
-	color: #B68750;
+	display: inline-block;
+	font-size: 60px;
 	border: 3px solid #B68750;
 	-webkit-transition-property: all;
 	-webkit-transition-duration: 0.8s;
-	background-color: #faeec7;
+	background: #faeec7;
+	text-decoration: none;
 }
-#previous_game:hover{
+#previous_game{
+	color: #B68750;
+	text-align: center;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+.taillecube:hover{
 	background-color: #B68750;
-	color: #faeec7;
 }
-
+.taillecube:hover #previous_game{
+	color: #faeec7;
+	-webkit-transition-property: all;
+	-webkit-transition-duration: 0.8s;
+}
+.taillecube2{
+	margin-top: 10px;
+	float:right;
+	margin-right: 19px;
+	padding-top: 25px;
+	width:350px;
+	height:280px;
+	margin-left: 20px;
+	display: inline-block;
+	font-size: 60px;
+	border: 3px solid #B68750;
+	-webkit-transition-property: all;
+	-webkit-transition-duration: 0.8s;
+	background: #faeec7;
+	text-decoration: none;
+}
+.taillecube2:hover{
+	background-color: #B68750;
+}
+.taillecube2:hover #running_games{
+	color: #faeec7;
+	-webkit-transition-property: all;
+	-webkit-transition-duration: 0.8s;
+}
 #running_games{
-	font-size: 80px;
-	text-decoration: none;
-	float: right;
-	width: 400px;
-	text-align: center;
-	margin-top: 55px;
-	margin-right: 18px;
-	margin-bottom: 10px;
-	padding-top: 50px;
-	padding-bottom: 37px;
 	color: #B68750;
-	border: 3px solid #B68750;
-	-webkit-transition-property: all;
-	-webkit-transition-duration: 0.8s;
-	background-color: #faeec7;
-}
-
-#running_games:hover{
-	background-color: #B68750;
-	color: #faeec7;
-
+	text-align: center;
+	margin-bottom: 0px;
+	margin-top: 0px;
 }
 
 #join_game{
@@ -355,4 +368,15 @@ input:focus::-webkit-input-placeholder{
 	text-decoration: none;
 	margin-top: 50px;
 	margin-left: 250px;
+}
+.biduleachanger{
+	display: block;
+	width: 400px;
+	height:200px;
+	background-color: red;
+	border: 3px solid #B68750;
+}
+#test{
+	text-decoration: none;
+	text-align: center;
 }
