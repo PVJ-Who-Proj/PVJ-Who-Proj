@@ -92,11 +92,14 @@ body{
 /********************************************************/
 
 .liste_acceuil{
-
 	padding-top: 210px;
 	list-style-type: none;
 	text-align: center;
 	font-size: 55px;
+}
+.liste_acceuil a{
+	display: inline-block;
+	margin: auto
 }
 #login_liste_acceuil{
 	border-top: 1px solid #B68750;
