@@ -62,6 +62,9 @@ body{
 	background-image: url(Ressources/img/menu.png);
 }
 
+#background_create_game{
+	background-image: url(Ressources/img/create_game.png);
+}
 
 
 .welcome_pad{
@@ -92,6 +95,10 @@ body{
 /********************************************************/
 
 .liste_acceuil{
+<<<<<<< HEAD
+=======
+	margin-top: 0px;
+>>>>>>> origin/master
 	padding-top: 210px;
 	list-style-type: none;
 	text-align: center;

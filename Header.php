@@ -17,20 +17,14 @@ include("bdd.php");
 				<div class="logo">
 					<img id="img_logo" src="Ressources/img/Logo_Guess_Who.png">
 					<?php
-					if(isset($_SESSION['login']))
+					if( $_SESSION['login'] == true )
 					{
-						if( $_SESSION['login'] == true )
-							{
-								?>
-								<form action="deco.php">
-									<input class="deco_butt" type="submit" value="">
-								</form>
-								<?php
-							}
-
-
+						?>
+						<form action="deco.php">
+							<input class="deco_butt" type="submit" value="">
+						</form>
+						<?php
 					}
-					
 
 					?>
 				</div>
