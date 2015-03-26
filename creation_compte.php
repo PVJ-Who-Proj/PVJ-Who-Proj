@@ -17,21 +17,44 @@ include("Header.php")
 				<a class="back_butt_login" href="acceuil.php"><img  src="Ressources/img/back.png"></a>
 				<input type="submit" value="">
 			</div>
+			<?php 
+			if(isset($_SESSION['mdp_correct']) && isset($_SESSION['mdp_vide']))
+			{
+				if($_SESSION['mdp_correct'] == false && $_SESSION['mdp_vide'] == false)
+				{
+					$_SESSION['mdp_correct'] = true;
+				}
+			}
+			?>
 			<div class="mauvais_mdp">
 				<?php
-				if($_SESSION['mdp_correct'] == false)
+				if(isset($_SESSION['mdp_correct']))
 				{
-					echo("Passwords do not match!");
+					if($_SESSION['mdp_correct'] == false)
+					{
+						echo("Passwords do not match!");
+					}
 				}
 				?>
 			</div>
-
+			<div class="mauvais_mdp">
+				<?php
+				if(isset($_SESSION['mdp_vide']))
+				{
+					if($_SESSION['mdp_vide'] == false)
+					{
+						echo("passwords, login and email cant be empty");
+					}
+				}
+				?>
+			</div>
 		</form>
-
 	</div>
 </div>
 
 
 <?php
+$_SESSION['mdp_correct'] = true;
+$_SESSION['mdp_vide'] = true;
 include("Footer.php")
 ?>

@@ -1,7 +1,4 @@
 body{
-	
-}
-body{
 	font-family: 'Lobster Two', cursive;
 	color: #B68750;
 	margin-top: 0px;
@@ -12,32 +9,30 @@ body{
 	background-image: repeat-x;
 	height: 955px;
 }
-
 .logo img{
-	display: inline;
+	display: inline-block;
 }
 .haut_page{
 	height: 130px;
 }
 .img_logo{
-	display: inline;
+	display: inline-block;
 }
-
 .deco_butt {
-	margin-left: 1200px;
 	background: url("Ressources/img/yellow_logout_butt.png");
 	width: 210px;
 	height: 69px;
 	border-radius: 40px;
-	margin-top: -30px;
 	border: none;
-}
-
-.help{
 	display: inline-block;
+	float:right;
+	margin-right: 50px;
+	margin-top: -105px;
+}
+.deco_butt:hover{
+	cursor: pointer;
 }
 .welcome{
-
 	width: 1081px;
 	height: 773px;
 	margin: auto;
@@ -152,7 +147,7 @@ body{
 	width: 472px;
 	margin-top: 20px;
 	padding-bottom: 0px;
-	padding-top: 104px;
+	padding-top: 114px;
 }
 .form_compte{
 	margin: auto;
@@ -237,10 +232,9 @@ input:focus::-webkit-input-placeholder{
 
 /********************************************************/
 
-
 .mauvais_mdp{
-	padding-top: 8px;
-	width: 230px;
+	padding-top: 0px;
+	width: 500px;
 	margin: auto;
 	color: red;
 	font-size: 25px;
@@ -251,7 +245,6 @@ input:focus::-webkit-input-placeholder{
 	width: 380px;
 	margin: auto;
 }
-
 
 /*********************************************************/
 
@@ -289,8 +282,6 @@ input:focus::-webkit-input-placeholder{
 	height: 645px;
 	width: 1020px;
 }
-
-
 #create_game{
 	display: inline-block;
 	font-size: 80px;
@@ -298,15 +289,15 @@ input:focus::-webkit-input-placeholder{
 	margin-left: 20px;
 	text-decoration: none;
 	width:976px;
-	height:130px;
-	padding-top: 20px;
+	height:115px;
+	padding-top: 15px;
 	color: #B68750;
 	background-color: #faeec7;
 	border: 3px solid #B68750;
 	-webkit-transition-property: all;
 	-webkit-transition-duration: 0.8s;
+	border-radius: 35px;
 }
-
 #create_game:hover{
 	background-color: #B68750;
 	color: #faeec7;
@@ -315,7 +306,7 @@ input:focus::-webkit-input-placeholder{
 	margin-top: 10px;
 	padding-top: 25px;
 	width:350px;
-	height:280px;
+	height:277px;
 	margin-left: 20px;
 	display: inline-block;
 	font-size: 60px;
@@ -324,6 +315,7 @@ input:focus::-webkit-input-placeholder{
 	-webkit-transition-duration: 0.8s;
 	background: #faeec7;
 	text-decoration: none;
+	border-radius: 35px;
 }
 #previous_game{
 	color: #B68750;
@@ -345,7 +337,7 @@ input:focus::-webkit-input-placeholder{
 	margin-right: 19px;
 	padding-top: 25px;
 	width:350px;
-	height:280px;
+	height:277px;
 	margin-left: 20px;
 	display: inline-block;
 	font-size: 60px;
@@ -354,6 +346,8 @@ input:focus::-webkit-input-placeholder{
 	-webkit-transition-duration: 0.8s;
 	background: #faeec7;
 	text-decoration: none;
+	border-radius: 35px;
+	margin-bottom: 10px;
 }
 .taillecube2:hover{
 	background-color: #B68750;
@@ -368,22 +362,4 @@ input:focus::-webkit-input-placeholder{
 	text-align: center;
 	margin-bottom: 0px;
 	margin-top: 0px;
-}
-
-#join_game{
-	font-size: 80px;
-	text-decoration: none;
-	margin-top: 50px;
-	margin-left: 250px;
-}
-.biduleachanger{
-	display: block;
-	width: 400px;
-	height:200px;
-	background-color: red;
-	border: 3px solid #B68750;
-}
-#test{
-	text-decoration: none;
-	text-align: center;
 }
