@@ -1,8 +1,14 @@
 
 <?php 
-
  include("Header.php");
+
+ if($_SESSION['login'] == true)
+ {
+ 	header("Location: accueil_partie.php");
+ }
 ?>
+
+
 	<div class="welcome" id="background_index" >
 		<div>
 			<p class="welcome_para welcome_pad"> Welcome to Guess Who! Through this game, you are going to play with your friends or against the computer. It will be a very funny experience for you and your family!! </p>
