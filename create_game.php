@@ -10,8 +10,4 @@ include("Header.php");
 		<input type="checkbox" name="type_game" value="ordi"> Computer
 		</div>
 		<input type="submit" value="create">
-
-
-
-
 </div>

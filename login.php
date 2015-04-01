@@ -26,10 +26,7 @@ include("Header.php")
 				?>
 
 			</div>
-
-
 			</form>
-			
 	</div>
 	
 

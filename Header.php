@@ -28,8 +28,6 @@ include("bdd.php");
 								<?php
 							}
 					}
-					
-
 					?>
 				</div>
 			</div>

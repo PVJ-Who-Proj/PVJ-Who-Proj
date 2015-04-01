@@ -23,7 +23,7 @@ $_SESSION['id_juste'] = true;
 					Check ranking
 				</li>
 			</a>
-			<a href="">
+			<a href="rules.php">
 				<li>
 					Read the rules here!
 				</li>
