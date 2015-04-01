@@ -61,6 +61,12 @@ body{
 	background-image: url(Ressources/img/create_game.png);
 }
 
+#background_running_games{
+	background-image: url(Ressources/img/running_games.png);
+}
+
+
+
 
 .welcome_pad{
 	padding-top:100px;
@@ -407,3 +413,5 @@ input:focus::-webkit-input-placeholder{
 	padding-top: 100px;
 	font-size: 80px;
 }
+
+
