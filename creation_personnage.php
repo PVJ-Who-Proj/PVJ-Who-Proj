@@ -28,7 +28,7 @@ $couleur_haut = $tab_couleur_haut[$num_couleur_haut];
 $sex_cara = rand(0,1);
 $num_couleur_peau = rand(0,1);
 
-if($num_couleur_peau = 0)
+if($num_couleur_peau == 0)
 {
 	$couleur_peau = "noir";
 }

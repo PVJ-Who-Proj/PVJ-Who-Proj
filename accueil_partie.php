@@ -13,8 +13,8 @@ include("Header.php");
 			<p id="previous_game" >My<br>previous<br>games</p>
 		</a>
 
-		<a class="taillecube2" href="">
-			<p id="running_games" href="">My<br>running<br>games</p>
+		<a class="taillecube2" href="running_games.php">
+			<p id="running_games">My<br>running<br>games</p>
 		</a>
 		<a id="create_game" href="">Join game</a>
 	</div>
