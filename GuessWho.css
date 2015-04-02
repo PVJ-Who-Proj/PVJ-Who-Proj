@@ -62,7 +62,6 @@ body{
 #background_create_game{
 	background-image: url(Ressources/img/create_game.png);
 }
-<<<<<<< HEAD
 .centrerrulestop{
 	padding-top: 90px;
 	width:980px;
@@ -74,7 +73,6 @@ body{
 	padding-left: 50px;
 	font-size: 20px;
 }
-=======
 
 #background_running_games{
 	background-image: url(Ressources/img/running_games.png);
@@ -83,10 +81,6 @@ body{
 	background-image: url(Ressources/img/join_game.png);
 }
 
-
-
-
->>>>>>> origin/master
 
 .welcome_pad{
 	padding-top:100px;
@@ -478,9 +472,6 @@ input[type="checkbox"]:checked + label::before{
 	display: inline-block;
 	margin-left: 50px;
 }
-=======
-
-
 
 /*********JOIN*******/
 
@@ -495,4 +486,3 @@ input[type="checkbox"]:checked + label::before{
 }
 
 
->>>>>>> 89be13ec9694debf23013d4703a46304d1536599
