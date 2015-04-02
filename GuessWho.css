@@ -64,6 +64,10 @@ body{
 #background_running_games{
 	background-image: url(Ressources/img/running_games.png);
 }
+#background_join_games{
+	background-image: url(Ressources/img/join_game.png);
+}
+
 
 
 
@@ -412,6 +416,20 @@ input:focus::-webkit-input-placeholder{
 .create_game{
 	padding-top: 100px;
 	font-size: 80px;
+}
+
+
+
+/*********JOIN*******/
+
+
+#join_button{
+	width: 105px;
+	height: 35px;
+	border-radius: 35px;
+	border: none;
+	background: url("Ressources/img/join_button.png");
+	cursor: pointer;
 }
 
 
