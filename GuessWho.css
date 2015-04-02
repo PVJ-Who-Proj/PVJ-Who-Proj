@@ -79,6 +79,10 @@ body{
 #background_running_games{
 	background-image: url(Ressources/img/running_games.png);
 }
+#background_join_games{
+	background-image: url(Ressources/img/join_game.png);
+}
+
 
 
 
@@ -456,6 +460,7 @@ input[type="checkbox"]:checked + label::before{
 .create_game{
 	font-size: 80px;
 }
+<<<<<<< HEAD
 .zonebas_creategame{
 	margin-top: 50px;
 }
@@ -473,3 +478,21 @@ input[type="checkbox"]:checked + label::before{
 	display: inline-block;
 	margin-left: 50px;
 }
+=======
+
+
+
+/*********JOIN*******/
+
+
+#join_button{
+	width: 105px;
+	height: 35px;
+	border-radius: 35px;
+	border: none;
+	background: url("Ressources/img/join_button.png");
+	cursor: pointer;
+}
+
+
+>>>>>>> 89be13ec9694debf23013d4703a46304d1536599

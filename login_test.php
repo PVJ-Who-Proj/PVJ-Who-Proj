@@ -17,10 +17,10 @@ while($donnees = $reponse->fetch())
 	{
 		if($donnees['password_user'] == $_POST['password'])
 		{
-			$_SESSION['login_user'] = $_POST['login'];
+			$login_user = $_POST['login'];
 			$_SESSION['id_juste'] = true;
 			$_SESSION['login'] = true;
-			header('Location: accueil_partie.php');
+			header("Location: accueil_partie.php?login=$login_user");
 			
 		}
 

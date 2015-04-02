@@ -1,6 +1,7 @@
 <?php
 session_start();
 include("bdd.php");
+
 $id_game = $_GET['id_game'];
 $id_user = $_GET['id_user'];
 for($i = 1; $i < 25; $i++)
@@ -179,6 +180,8 @@ $req->execute(array(
 
 
 }
+
+header("Location: accueil_partie.php");
 
 ?>
 
