@@ -62,6 +62,7 @@ body{
 #background_create_game{
 	background-image: url(Ressources/img/create_game.png);
 }
+<<<<<<< HEAD
 .centrerrulestop{
 	padding-top: 90px;
 	width:980px;
@@ -73,6 +74,15 @@ body{
 	padding-left: 50px;
 	font-size: 20px;
 }
+=======
+
+#background_running_games{
+	background-image: url(Ressources/img/running_games.png);
+}
+
+
+
+>>>>>>> origin/master
 
 .welcome_pad{
 	padding-top:100px;
@@ -176,12 +186,12 @@ body{
 	margin-bottom: 50px;
 }
 .form_compte input[type="text"], input[type="password"], input[type="email"]{
-padding-left: 20px;
-color: #B68750;
-font-size: 35px;
-height: 80px;
-width: 480px;
-box-shadow: 0 0 15px 2px;
+	padding-left: 20px;
+	color: #B68750;
+	font-size: 35px;
+	height: 80px;
+	width: 480px;
+	box-shadow: 0 0 15px 2px;
 }
 .form_compte input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus{
 	background-color: #B68750;
@@ -377,17 +387,6 @@ input:focus::-webkit-input-placeholder{
 	margin-top: 50px;
 	margin-left: 250px;
 }
-.biduleachanger{
-	display: block;
-	width: 400px;
-	height:200px;
-	background-color: red;
-	border: 3px solid #B68750;
-}
-#test{
-	text-decoration: none;
-	text-align: center;
-}
 /**Rules**/
 .butt_rules{
 	margin-left: 0px;
@@ -411,13 +410,66 @@ input:focus::-webkit-input-placeholder{
 /**Create a game**/
 .create_game input[type="text"]{
 	display: block;
-	margin: auto;
+	padding-left: 20px;
+	color: #B68750;
+	font-size: 35px;
+	height: 80px;
+	width: 480px;
+	box-shadow: 0 0 15px 2px;
+	background: none;
+	border: 1px solid #B68750;
+	border-radius: 20px;
+}
+.create_game input[type="text"], select{
+	outline:none;
+}
+.create_game input[type="text"]:focus{
+	background-color: #B68750;
+	color: #F8E8B0;
+}
+.create_game_checkbox{
+	margin-top: 50px;
+	margin-left: 40px;
+	position: relative;
 }
 .create_game input[type="checkbox"]{
-	width: 50px;
-	height: 50px;
+	display:none;
+}
+input[type="checkbox"] + label::before{
+	cursor:pointer;
+	display:inline-block;
+	content:"";
+	width:50px;
+	height:50px;
+	background: #F8E8B0;
+	border-radius: 10px;
+	border: 1px solid #B68750;
+	transition: all 0.2s ease-in-out;
+}
+input[type="checkbox"]:checked + label::before{
+	background: #B68750;
+	content:"";
+	color:#F8E8B0;
+	width:50px;
+	height:50px;
 }
 .create_game{
-	padding-top: 100px;
 	font-size: 80px;
+}
+.zonebas_creategame{
+	margin-top: 50px;
+}
+.zone_fond_create_game{
+	width:500px;
+	padding-top: 180px;
+	margin:auto;
+}
+.butt_create_game{
+	background: url("Ressources/img/yellow_logout_butt.png");
+	width: 210px;
+	height: 69px;
+	border-radius: 40px;
+	border: none;
+	display: inline-block;
+	margin-left: 50px;
 }
