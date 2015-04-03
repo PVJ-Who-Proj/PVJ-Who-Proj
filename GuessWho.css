@@ -463,7 +463,7 @@ input[type="checkbox"]:checked + label::before{
 	margin:auto;
 }
 .butt_create_game{
-	background: url("Ressources/img/yellow_logout_butt.png");
+	background: url("Ressources/img/create_game_butt.png");
 	width: 210px;
 	height: 69px;
 	border-radius: 40px;
