@@ -13,8 +13,7 @@ include("Header.php");
 			<input id="carrebis" type="checkbox" name="type_game" value="Computer"/><label for="carrebis"> Computer</label> 
 		</div>
 
-
-		<div class="zonebas_creategame">
+		<div class="back_butt_block zone_bas_create_game">
 			<a class="back_butt_login" id="back_rank" href="accueil_partie.php"><img  src="Ressources/img/back.png"></a>
 			<input class="butt_create_game" type="submit" value="">
 		</div>
