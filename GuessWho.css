@@ -246,6 +246,7 @@ input:focus::-webkit-input-placeholder{
 .back_butt_block input:hover{
 	box-shadow: 0 0 0 0;
 	opacity: 0.5;
+	cursor:pointer;
 }
 
 /**mot de passe**/
@@ -284,9 +285,6 @@ input:focus::-webkit-input-placeholder{
 }
 .tableau{
 	height: 670px;
-}
- #back_rank{
-	margin-left: 70px;
 }
 
 
@@ -405,7 +403,9 @@ input:focus::-webkit-input-placeholder{
 	padding-left: 80px;
 	padding-top: 55px;
 }
+
 /**Create a game**/
+
 .create_game input[type="text"]{
 	display: block;
 	padding-left: 20px;
@@ -470,6 +470,9 @@ input[type="checkbox"]:checked + label::before{
 	border: none;
 	display: inline-block;
 	margin-left: 50px;
+}
+.zone_bas_create_game{
+	margin-top: 60px;
 }
 
 /*********JOIN*******/
