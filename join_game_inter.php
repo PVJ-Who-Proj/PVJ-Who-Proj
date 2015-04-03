@@ -11,6 +11,7 @@ while($donnees = $reponse->fetch())
 
 $bdd->query("UPDATE game SET id_joueur2 = '$id_joueur2' WHERE id_joueur1 = '$id_joueur1' ");
 $bdd->query("UPDATE game SET statut_game = 1 WHERE id_joueur1 = '$id_joueur1' ");
+$bdd->query("UPDATE game SET AuTourDe = '$id_joueur2' WHERE id_joueur1 = '$id_joueur1' ");
 
 	header("Location: creation_personnage.php?id_user=$id_joueur2&id_game=$id_game");
 

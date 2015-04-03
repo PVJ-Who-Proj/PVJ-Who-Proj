@@ -83,7 +83,7 @@ if($sex_cara == 0)
 
 
 	
-	$tab_type_haut = array('noeudpap', 'petitcolroule1', 'groscolroule', 'pull', 'chemise', 'costumecravatte');
+	$tab_type_haut = array('noeudpap', 'petitcolroule', 'groscolroule', 'pull', 'chemise', 'costumecravatte');
 	$num_type_haut = array_rand($tab_type_haut, 1);
 	$type_haut = $tab_type_haut[$num_type_haut];
 
@@ -181,7 +181,20 @@ $req->execute(array(
 
 }
 
-header("Location: accueil_partie.php");
+$reponse = $bdd->query("SELECT id_joueur2 FROM game WHERE id_game = '$id_game' ");
+while($donnees = $reponse->fetch())
+{
+	if($donnees['id_joueur2'] == "")
+	{
+		header("Location: accueil_partie.php");
+	}
+	else
+	{
+		header("Location: game_play.php?id_game=$id_game");
+	}
+}
+
+
 
 ?>
 
