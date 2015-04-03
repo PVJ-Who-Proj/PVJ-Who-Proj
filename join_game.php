@@ -53,7 +53,7 @@ $reponse = $bdd->query("SELECT game_title, type_game, id_joueur1, id_joueur2 FRO
 						<TH>
 							<form action="join_game_inter.php" method="POST">
 								<input id="join_button" type="submit" value="">
-								<input type="hidden" name = "id_joueur1" value="<?php echo($donnees['id_joueur1']);?>">
+								<input type="hidden" name = "game_title" value="<?php echo($donnees['game_title']);?>">
 							</form>
 						</TH>
 						
@@ -80,4 +80,8 @@ $reponse = $bdd->query("SELECT game_title, type_game, id_joueur1, id_joueur2 FRO
 	</TABLE>
 
 
+
+</div>
+<div>
+<a class="back_butt_login" id="back_rank" href="accueil_partie.php"><img  src="Ressources/img/back.png"></a>
 </div>

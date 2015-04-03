@@ -1,7 +1,7 @@
 <?php
 include("Header.php");
 $login_user = $_SESSION['login_user'];
-$reponse = $bdd->query("SELECT game_title, type_game, id_joueur1, id_joueur2 FROM game WHERE id_joueur1 = '$login_user' OR id_joueur2 = '$login_user' ");
+$reponse = $bdd->query("SELECT game_title, type_game, id_joueur1, id_joueur2, AuTourDe FROM game WHERE id_joueur1 = '$login_user' OR id_joueur2 = '$login_user' ");
 ?>
 
 
@@ -22,10 +22,10 @@ $reponse = $bdd->query("SELECT game_title, type_game, id_joueur1, id_joueur2 FRO
 				Type of game
 			</TH>
 			<TH>
-				Player 1
+				Opponent
 			</TH>
 			<TH>
-				Player 2
+				Turn
 			</TH>
 
 		</TR>
@@ -34,7 +34,7 @@ $reponse = $bdd->query("SELECT game_title, type_game, id_joueur1, id_joueur2 FRO
 			while($donnees = $reponse -> fetch())
 			{
 				?>
-				<TR class="ligne_tableau_game">
+				<TR class="ligne_tableau">
 					<TH>
 						<?php
 							echo($donnees['game_title']);
@@ -47,12 +47,44 @@ $reponse = $bdd->query("SELECT game_title, type_game, id_joueur1, id_joueur2 FRO
 					</TH>
 					<TH>
 						<?php
-						echo($donnees['id_joueur1']);
+						if($login_user == $donnees['id_joueur1'])
+						{
+							echo($donnees['id_joueur2']);
+						}
+						
+						else
+						{
+							echo($donnees['id_joueur1']);
+						}
+						if($donnees['id_joueur2'] == "")
+						{
+							?>
+							<div class="no_one">
+							<?php
+							echo("No one for the moment");
+							?>
+							</div>
+							<?php
+						}
 						?>
 					</TH>
 					<TH>
 						<?php
-						echo($donnees['id_joueur2']);
+						if($login_user == $donnees['AuTourDe'])
+						{
+							?>
+							<a href="game_play.php"><img src="Ressources/img/mine.png"></a>
+							<?php
+						}
+						else if($donnees['id_joueur2'] == "")
+						{
+							?> <img src="Ressources/img/alone.png"> <?php
+						}
+						else
+						{
+							?> <img src="Ressources/img/not_mine.png"> <?php
+						}
+
 						?>
 					</TH>
 				</TR>

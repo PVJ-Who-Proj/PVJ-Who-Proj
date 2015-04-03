@@ -484,4 +484,56 @@ input[type="checkbox"]:checked + label::before{
 	cursor: pointer;
 }
 
+.no_one{
+	font-style: italic;
+}
 
+
+/**********GAMEPLAY*************/
+
+
+
+.personnages{
+	position: relative;
+	width: 220px;
+	height: 300px;
+}
+
+.personnages img{
+	position: absolute;
+}
+
+.vetement{
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+#peau{
+	width: 109px;
+
+
+}
+
+#haut{
+	padding-top: 120px;
+
+	width: 175;
+}
+
+#cheveux{
+	width: 129;
+	
+}
+
+#collier{
+	width: 60px;
+	padding-top: 120px;
+}
+
+
+#barbe{
+	width: 90px;
+	padding-top: 70px;
+
+}

@@ -15,9 +15,7 @@ else
 	$id_joueur2 = "";
 }
 
-
-
-
+/* FAIRE CETTE PUTAIN DE VERIF */
 
 
 $req = $bdd->prepare('INSERT INTO game(game_title, type_game, statut_game, id_joueur1, id_joueur2) VALUES(:game_title, :type_game, :statut_game, :id_joueur1, :id_joueur2)');

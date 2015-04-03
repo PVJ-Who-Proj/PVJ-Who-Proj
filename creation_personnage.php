@@ -44,7 +44,7 @@ $avoir_lunette = rand(0,1);
 
 if($avoir_lunette == 1)
 {
-	$tab_couleur_lunette = array('bleu', 'jaune', 'vert', 'rouge', 'noir', 'blanc');
+	$tab_couleur_lunette = array('orange', 'jaune', 'vert', 'rouge', 'bleu', 'violet');
 	$num_couleur_lunette = array_rand($tab_couleur_lunette, 1);
 	$couleur_lunette = $tab_couleur_lunette[$num_couleur_lunette];
 	

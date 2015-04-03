@@ -87,7 +87,7 @@ $rank = 1;
 
 </div>
 
-
+<div>
 <a class="back_butt_login" id="back_rank" href="acceuil.php"><img  src="Ressources/img/back.png"></a>
 </div>
 	
