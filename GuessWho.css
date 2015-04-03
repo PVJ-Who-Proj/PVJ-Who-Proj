@@ -286,6 +286,9 @@ input:focus::-webkit-input-placeholder{
 .tableau{
 	height: 670px;
 }
+#back_rank{
+	margin-left: 70px;
+}
 
 
 /**Menu game**/

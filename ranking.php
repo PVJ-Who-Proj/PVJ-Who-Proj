@@ -8,11 +8,8 @@ $rank = 1;
 ?>
 
 <div class="welcome" id="background_rank">
-	
 <div class="tableau">
 	<TABLE class="classement_tableau">
-
-
 		<TR class="haut_tableau">
 			<TH>
 				Rank
@@ -64,29 +61,12 @@ $rank = 1;
 						?>
 					</TH>
 				</TR>
-
-
 				<?php
 			}
-
-
-
-
-
-
-
 			?>
-
-
-		</TR>	
-
-
-
+		</TR>
 	</TABLE>
-
-
 </div>
-
 
 <a class="back_butt_login" id="back_rank" href="acceuil.php"><img  src="Ressources/img/back.png"></a>
 </div>
