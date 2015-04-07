@@ -1,7 +1,7 @@
 <?php
 include("Header.php");
 $login_user = $_SESSION['login_user'];
-$reponse = $bdd->query("SELECT game_title, type_game, id_joueur1, id_joueur2, AuTourDe FROM game WHERE id_joueur1 = '$login_user' OR id_joueur2 = '$login_user' ");
+$reponse = $bdd->query("SELECT ID_game, game_title, type_game, id_joueur1, id_joueur2, AuTourDe FROM game WHERE id_joueur1 = '$login_user' OR id_joueur2 = '$login_user' ");
 ?>
 
 
@@ -73,7 +73,7 @@ $reponse = $bdd->query("SELECT game_title, type_game, id_joueur1, id_joueur2, Au
 						if($login_user == $donnees['AuTourDe'])
 						{
 							?>
-							<a href="game_play.php"><img src="Ressources/img/mine.png"></a>
+							<a href="game_play.php?id_game=<?php echo($donnees['ID_game'])?>"><img src="Ressources/img/mine.png"></a>
 							<?php
 						}
 						else if($donnees['id_joueur2'] == "")
