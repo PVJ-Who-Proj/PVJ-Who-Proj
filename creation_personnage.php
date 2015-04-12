@@ -63,7 +63,7 @@ for($i = 0; $i < 24; $i++)
 	if($sex_cara == 0)
 	{
 		$sexe = "homme";
-		$tab_prenom_homme = array('Léo', 'Paul', 'Antoine', 'Alexandre', 'Jonathan', 'Vincent', 'Pierre', 'Bastien', 'Florent', 'Rémi', 'Alexandre', 'Quentin', 'Alexis', 'Mael', 'Maxence', 'Timéo', 'Nolan', 'Sascha', 'Valentin', 'Romain', 'Mohamed', 'Rayan', 'Abdel-Kadère', 'Abdel-Moulèke');
+		$tab_prenom_homme = array('Léo', 'Paul', 'Antoine', 'Alexandre', 'Jonathan', 'Vincent', 'Pierre', 'Bastien', 'Florent', 'Rémi', 'Alexandre', 'Quentin', 'Alexis', 'Mael', 'Maxence', 'Timéo', 'Nolan', 'Sascha', 'Valentin', 'Romain', 'Mohamed', 'Rayan', 'Abdel', 'Edwin');
 		$nom = $tab_prenom_homme[$i];
 
 		if($avoir_lunette == 1)
@@ -162,16 +162,18 @@ for($i = 0; $i < 24; $i++)
 
 
 
-	$req = $bdd->prepare('INSERT INTO pnj(id_game, id_user, nom, sexe, peau, statut_character, barbe, moustache, haut, cheveux, collier, lunette, yeux) VALUES (:id_game, :id_user, :nom, :sexe, :peau, :statut_character, :barbe, :moustache, :haut, :cheveux, :collier, :lunette, :yeux)');
+	$req = $bdd->prepare('INSERT INTO pnj(id_game, id_user, nom, sexe, peau, couleur_poil, statut_character, barbe, moustache, couleur_haut, haut, cheveux, collier, lunette, yeux) VALUES (:id_game, :id_user, :nom, :sexe, :peau, :couleur_poil, :statut_character, :barbe, :moustache, :couleur_haut, :haut, :cheveux, :collier, :lunette, :yeux)');
 	$req->execute(array(
 			'id_game' => $id_game,
 			'id_user' => $id_user,
 			'nom' => $nom,
 			'sexe' => $sexe,
 			'peau' => $couleur_peau,
+			'couleur_poil' => $couleur_poils,
 			'statut_character' => true,
 			'barbe' => $barbe,
 			'moustache' => $moustache,
+			'couleur_haut' => $couleur_haut,
 			'haut' => $haut,
 			"cheveux" => $cheveux,
 			"collier" => $collier,

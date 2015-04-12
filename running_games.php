@@ -82,7 +82,7 @@ $reponse = $bdd->query("SELECT ID_game, game_title, type_game, id_joueur1, id_jo
 						}
 						else
 						{
-							?> <img src="Ressources/img/not_mine.png"> <?php
+							?> <a href="game_play.php?id_game=<?php echo($donnees['ID_game'])?>"><img src="Ressources/img/not_mine.png"></a> <?php
 						}
 
 						?>

@@ -33,10 +33,53 @@ $donnees = $reponse->fetch();
 			
 			
 		}
-		?> <div class="pers_joueur"> <?php
-		?> <p>Your opponent has to find this people!</p> <?php
-		include("affiche_personnage.php");
-		?> </div>
+		?>
+			 <div class="pers_joueur">
+			 <p>Your opponent has to find this person!</p> <?php
+			include("affiche_personnage.php");
+			?> </div>
+
+			<?php
+			$reponse = $bdd->query("SELECT AuTourDe FROM game WHERE id_game = '$id_game' ");
+			$donnees = $reponse->fetch();
+			if($donnees['AuTourDe'] == $login_user)
+			{
+				?><form class="question" action = "game_play_inter.php" method="POST">
+				<input type="hidden" name = "game_title" value = <?php echo($id_game); ?>>
+				<p> Questions you can ask to your opponent!</p>
+				<div class="body_qestion">
+					<p> Body questions </p>
+					<input type="checkbox" name="question" value="couleur_peau" />Does the character has a white skin?<br>
+					<input type="checkbox" name="question" value="sexe" />Is it a boy?<br>
+				</div>
+				<div class="hairs_question">
+					<p> Hairs questions </p>
+					<input type="checkbox" name="question" value="noir" />Has he/she got black hairs?<br>
+					<input type="checkbox" name="question" value="gris" />Has he/she got grey hairs?<br>
+					<input type="checkbox" name="question" value="blond" />Has he/she got blond hairs?<br>
+					<input type="checkbox" name="question" value="orange" />Has he/she got orange hairs?<br>
+				</div>
+				<div class="clothe_question">
+					<p> Clothes questions </p>
+					<input type="checkbox" name="question" value="haut_rouge" />Has he/she got haut rouge?<br>
+					<input type="checkbox" name="question" value="haut_noir" />Has he/she got haut noir?<br>
+					<input type="checkbox" name="question" value="haut_vert" />Has he/she got haut vert?<br>
+					<input type="checkbox" name="question" value="haut_jaune" />Has he/she got haut jaune?<br>
+					<input type="checkbox" name="question" value="haut_bleu" />Has he/she got haut bleu?<br>
+				</div>
+				<input type="text" name="name" placeholder="Have an idea?">
+				<input type="submit" value ="Ask!">
+
+			</form>
+
+
+				<?php
+			}
+			?>
+
+			
+
+
 
 	</div>
 	<a class="back_butt_login" id="back_gameplay" href="running_games.php"><img  src="Ressources/img/back.png"></a>

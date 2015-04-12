@@ -1,8 +1,16 @@
 <?php
 	while($donnees = $reponse->fetch())
 	{
+		if($donnees['statut_character'] == 1)
+		{
+			$statut_pers = "en_jeu";
+		}
+		else
+		{
+			$statut_pers = "hors_jeu";
+		}
 		?>
-			<div class="personnages">
+			<div id="<?php echo($statut_pers); ?>" class="personnages">
 				
 					<img id = "peau" class="vetement" src="Ressources/personnages/<?php echo($donnees['peau']); ?>.png ">
 					<img  id="yeux" class="vetement" src="Ressources/personnages/<?php echo($donnees['yeux']); ?>.png">
