@@ -1,114 +1,103 @@
 body{
+	background-image: url(Ressources/img/Background2.png);
 	font-family: 'Lobster Two', cursive;
 	color: #B68750;
-	margin-top: 0px;
-	margin-bottom: 0px;
+	margin: 0px;
 }
-.integral{
-	background-image: url(Ressources/img/Background.png);
-	background-image: repeat-x;
+
+section{
 	height: auto;
-	padding-bottom: 100px;
 }
-.logo img{
-	display: inline-block;
-}
-.haut_page{
-	height: 130px;
-}
-.img_logo{
-	display: inline-block;
-}
-.deco_butt {
-	background: url("Ressources/img/yellow_logout_butt.png");
-	width: 210px;
-	height: 69px;
-	border-radius: 40px;
-	border: none;
-	display: inline-block;
-	float:right;
-	margin-right: 50px;
-	margin-top: -105px;
-}
-.deco_butt:hover{
-	cursor: pointer;
-}
+
 .welcome{
+	background-image: url(Ressources/img/welcome.png);
 	width: 1081px;
 	height: 773px;
 	margin: auto;
 	position: relative;
+	z-index: 2;
 }
-#background_before{
-	background-image: url(Ressources/img/before.png);
+
+/*****************************************************  header  ***********************************************************/
+
+header #logo{
+	display: inline-block;
 }
-#background_index{
-	background-image: url(Ressources/img/welcome.png);
+
+header #deco{
+	border-radius: 40px;
+	display: inline-block;
+	float:right;
+	margin-right: 50px;
+	margin-top: 10px;
+	cursor: pointer;
 }
-#background_login{
-	background-image: url(Ressources/img/login.png);
+
+/*****************************************************  header  ***********************************************************/
+
+footer{
+	background-image: url(Ressources/img/sol.png);
+	position: absolute;
+	bottom: 0px;
+	height: 68px;
+	width: 100%;
 }
-#background_create{
-	background-image: url(Ressources/img/compte.png);
-}
-#background_rank{
-	background-image: url(Ressources/img/ranking.png);
-}
-#background_menu{
-	background-image: url(Ressources/img/menu.png);
-}
-#background_rules{
-	background-image: url(Ressources/img/rules.png);
-}
-#background_create_game{
-	background-image: url(Ressources/img/create_game.png);
-}
-.centrerrulestop{
-	padding-top: 90px;
-	width:980px;
-	padding-left: 50px;
+
+footer p{
+	position: absolute;
+	color: #a16d35;
+	bottom: 0px;
+	margin-bottom: 5px;
+	margin-left: 30px;
 	font-size: 20px;
-}
-.centrerrulesbot{
-	width:700px;
-	padding-left: 50px;
-	font-size: 20px;
+	z-index: 1;
 }
 
-#background_running_games{
-	background-image: url(Ressources/img/running_games.png);
-}
-#background_join_games{
-	background-image: url(Ressources/img/join_game.png);
+/*****************************************************  panneau de présentation  ***********************************************************/
+
+.welcome #textHaut{
+	padding-top:150px;
+	margin-bottom: 150px;
 }
 
-
-.welcome_pad{
-	padding-top:100px;
-}
-.welcome_para{
+.welcome p{
+	width: 92%;
 	margin: auto;
-	padding: 120px 50px 30px 50px;
 	text-align: center;
 	font-size: 55px;
 }
-.next_butt{
-	padding-left: 900px;
+
+.welcome div p{
+	text-align: left;
+	margin-left: 7.5%;
+	width: 820px;
 }
-.next_butt img{
+
+.welcome div{
+	display: inline-block;
+	width: 100%;
+}
+
+.welcome #next{
+	float: right;
+	margin-right: 80px;
+	margin-top: -64px;
+}
+
+.welcome #next img{
 	box-shadow: 0 0 25px 2px #B68750;
 	border-radius: 40px;
 }
-.next_butt:hover{
+
+.next:hover{
 	opacity: 0.5;
 }
-.next_butt:hover img{
-	box-shadow: 0px 0px 0px 0px;
-}
+
 .next_back_butt{
 	padding-left: 65px;
 }
-/**accueil**/
+
+/*****************************************************  accueil  ***********************************************************/
 
 .liste_acceuil{
 	margin-top: 0px;
@@ -117,52 +106,63 @@ body{
 	text-align: center;
 	font-size: 55px;
 }
+
 .liste_acceuil a{
 	display: inline-block;
 	margin: auto
 }
+
 #login_liste_acceuil{
 	border-top: 1px solid #B68750;
 }
+
 .liste_acceuil li{
 	padding: 15px 10px 15px 10px;
 	border-bottom: solid 1px #B68750;
 	margin: auto;
 	width: 600px;
 }
+
 .liste_acceuil a{
 	text-decoration: none;
 	color: #B68750;
 }
+
 .liste_acceuil li:hover{
 	background-color: #B68750;
 	transition: 0.45s linear;
 }
+
 .liste_acceuil li:hover {
 	color: #F8E8B0;
 	transition: 0.45s linear;
 }
+
 .back_butt{
 	margin-left: 80px;
 }
+
 .back_butt img{
 	box-shadow: 0 0 25px 2px #B68750;
 	border-radius: 40px;
 }
+
 .back_butt:hover{
 	opacity: 0.5;
 }
+
 .back_butt:hover img{
 	box-shadow: 0px 0px 0px 0px;
 }
 
-/**Creation compte**/
+/*****************************************************  Creation compte  ***********************************************************/
 
 .espace_login{
 	padding-top: 100px;
 	margin: auto;
 	font-size: 35px;
 }
+
 .new_compte{
 	margin: auto;
 	width: 472px;
@@ -170,12 +170,15 @@ body{
 	padding-bottom: 0px;
 	padding-top: 114px;
 }
+
 .form_compte{
 	margin: auto;
 }
+
 .title_login{
 	text-align: center;
 }
+
 .form_compte input{
 	margin: auto;
 	display: block;
@@ -184,6 +187,7 @@ body{
 	border-radius: 20px;
 	margin-bottom: 50px;
 }
+
 .form_compte input[type="text"], input[type="password"], input[type="email"]{
 	padding-left: 20px;
 	color: #B68750;
@@ -192,19 +196,24 @@ body{
 	width: 480px;
 	box-shadow: 0 0 15px 2px;
 }
+
 .form_compte input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus{
 	background-color: #B68750;
 	color: #F8E8B0;
 }
+
 input::-webkit-input-placeholder{
 	color: #B68750;
 }
+
 input:focus::-webkit-input-placeholder{
 	color:#F8E8B0;
 }
+
 .form_compte input[type="password"], input[type="email"], input[type="text"],  select{
 	outline:none;
 }
+
 .form_compte input[type="submit"]{
 	cursor: pointer;
 	width: 210px;
@@ -216,20 +225,25 @@ input:focus::-webkit-input-placeholder{
 	margin-left: 70px;
 	background: url("Ressources/img/create.png");
 }
+
 .form_login input[type="submit"]{
 	margin-left: 70px;
 	background: url("Ressources/img/login_butt.png");
 }
+
 .back_butt_login{
 	margin-left: 0px;
 }
+
 .back_butt_login:hover{
 	opacity: 0.5;
 }
+
 .back_butt_login img{
 	box-shadow: 0 0 25px 2px #B68750;
 	border-radius: 40px;
 }
+
 .back_butt_login:hover img{
 	box-shadow: 0px 0px 0px 0px;
 }
@@ -239,18 +253,20 @@ input:focus::-webkit-input-placeholder{
 	height: 68px;
 	width: 360px;
 }
+
 .back_butt_block input{
 	display: inline-block;
 	border-radius: 20px;
 	box-shadow: 0 0 25px 2px #B68750;
 }
+
 .back_butt_block input:hover{
 	box-shadow: 0 0 0 0;
 	opacity: 0.5;
 	cursor:pointer;
 }
 
-/**mot de passe**/
+/*****************************************************  mot de passe  ***********************************************************/
 
 .mauvais_mdp{
 	padding-top: 0px;
@@ -259,6 +275,7 @@ input:focus::-webkit-input-placeholder{
 	color: red;
 	font-size: 25px;
 }
+
 .mauvais_log{
 	padding-top: 10px;
 	color: red;
@@ -266,33 +283,36 @@ input:focus::-webkit-input-placeholder{
 	margin: auto;
 }
 
-/**Classement**/
-
+/*****************************************************  Classement  ***********************************************************/
 
 .classement_tableau{
 	margin: auto;
 	padding-top: 100px
 }
+
 .haut_tableau{
 	font-size: 30px;
 	height: 90px;
 }
+
 .ligne_tableau{
 	font-size: 25px;
 	height: 50px;
 }
+
 .classement_tableau th{
 	width: 300px;
 }
+
 .tableau{
 	height: 670px;
 }
+
 #back_rank{
 	margin-left: 70px;
 }
 
-
-/**Menu game**/
+/*****************************************************  Menu game  ***********************************************************/
 
 .entour_menu{
 	margin: auto;
@@ -300,6 +320,7 @@ input:focus::-webkit-input-placeholder{
 	height: 645px;
 	width: 1020px;
 }
+
 #create_game{
 	display: inline-block;
 	font-size: 80px;
@@ -316,10 +337,12 @@ input:focus::-webkit-input-placeholder{
 	-webkit-transition-duration: 0.8s;
 	border-radius: 35px;
 }
+
 #create_game:hover{
 	background-color: #B68750;
 	color: #faeec7;
 }
+
 .taillecube{
 	margin-top: 10px;
 	padding-top: 25px;
@@ -335,20 +358,24 @@ input:focus::-webkit-input-placeholder{
 	text-decoration: none;
 	border-radius: 35px;
 }
+
 #previous_game{
 	color: #B68750;
 	text-align: center;
 	margin-bottom: 0px;
 	margin-top: 0px;
 }
+
 .taillecube:hover{
 	background-color: #B68750;
 }
+
 .taillecube:hover #previous_game{
 	color: #faeec7;
 	-webkit-transition-property: all;
 	-webkit-transition-duration: 0.8s;
 }
+
 .taillecube2{
 	margin-top: 10px;
 	float:right;
@@ -367,40 +394,50 @@ input:focus::-webkit-input-placeholder{
 	border-radius: 35px;
 	margin-bottom: 10px;
 }
+
 .taillecube2:hover{
 	background-color: #B68750;
 }
+
 .taillecube2:hover #running_games{
 	color: #faeec7;
 	-webkit-transition-property: all;
 	-webkit-transition-duration: 0.8s;
 }
+
 #running_games{
 	color: #B68750;
 	text-align: center;
 	margin-bottom: 0px;
 	margin-top: 0px;
 }
+
 #join_game{
 	font-size: 80px;
 	text-decoration: none;
 	margin-top: 50px;
 	margin-left: 250px;
 }
-/**Rules**/
+
+/*****************************************************  Rules  ***********************************************************/
+
 .butt_rules{
 	margin-left: 0px;
 }
+
 .butt_rules:hover{
 	opacity: 0.5;
 }
+
 .butt_rules img{
 	box-shadow: 0 0 25px 2px #B68750;
 	border-radius: 40px;
 }
+
 .butt_rules:hover img{
 	box-shadow: 0px 0px 0px 0px;
 }
+
 .back_butt_rules{
 	height: 68px;
 	width: 360px;
@@ -408,7 +445,7 @@ input:focus::-webkit-input-placeholder{
 	padding-top: 55px;
 }
 
-/**Create a game**/
+/*****************************************************  Create a game  ***********************************************************/
 
 .create_game input[type="text"]{
 	display: block;
@@ -422,21 +459,26 @@ input:focus::-webkit-input-placeholder{
 	border: 1px solid #B68750;
 	border-radius: 20px;
 }
+
 .create_game input[type="text"], select{
 	outline:none;
 }
+
 .create_game input[type="text"]:focus{
 	background-color: #B68750;
 	color: #F8E8B0;
 }
+
 .create_game_checkbox{
 	margin-top: 50px;
 	margin-left: 40px;
 	position: relative;
 }
+
 .create_game input[type="checkbox"]{
 	display:none;
 }
+
 input[type="checkbox"] + label::before{
 	cursor:pointer;
 	display:inline-block;
@@ -448,6 +490,7 @@ input[type="checkbox"] + label::before{
 	border: 1px solid #B68750;
 	transition: all 0.2s ease-in-out;
 }
+
 input[type="checkbox"]:checked + label::before{
 	background: #B68750;
 	content:"";
@@ -455,17 +498,21 @@ input[type="checkbox"]:checked + label::before{
 	width:50px;
 	height:50px;
 }
+
 .create_game{
 	font-size: 80px;
 }
+
 .zonebas_creategame{
 	margin-top: 50px;
 }
+
 .zone_fond_create_game{
 	width:500px;
 	padding-top: 180px;
 	margin:auto;
 }
+
 .butt_create_game{
 	background: url("Ressources/img/create_game_butt.png");
 	width: 210px;
@@ -475,12 +522,12 @@ input[type="checkbox"]:checked + label::before{
 	display: inline-block;
 	margin-left: 50px;
 }
+
 .zone_bas_create_game{
 	margin-top: 60px;
 }
 
-/*********JOIN*******/
-
+/*****************************************************  rejoindre jeu  ***********************************************************/
 
 #join_button{
 	width: 105px;
@@ -495,8 +542,7 @@ input[type="checkbox"]:checked + label::before{
 	font-style: italic;
 }
 
-
-/**********GAMEPLAY*************/
+/*****************************************************  Creation personnage  ***********************************************************/
 
 .background_personnage{
 	margin-left: 30px;
@@ -643,4 +689,54 @@ input[type="checkbox"]:checked + label::before{
 	vertical-align: top;
 	margin-top: 5px;
 	margin-left: 30px;
+}
+
+
+#background_before{
+	background-image: url(Ressources/img/before.png);
+}
+
+#background_login{
+	background-image: url(Ressources/img/login.png);
+}
+
+#background_create{
+	background-image: url(Ressources/img/compte.png);
+}
+
+#background_rank{
+	background-image: url(Ressources/img/ranking.png);
+}
+
+#background_menu{
+	background-image: url(Ressources/img/menu.png);
+}
+
+#background_rules{
+	background-image: url(Ressources/img/rules.png);
+}
+
+#background_create_game{
+	background-image: url(Ressources/img/create_game.png);
+}
+
+#background_running_games{
+	background-image: url(Ressources/img/running_games.png);
+}
+
+#background_join_games{
+	background-image: url(Ressources/img/join_game.png);
+}
+
+.centrerrulestop{
+	padding-top: 90px;
+	width:980px;
+	padding-left: 50px;
+	font-size: 20px;
+}
+
+.centrerrulesbot{
+	width:700px;
+	padding-left: 50px;
+	font-size: 20px;
 }
