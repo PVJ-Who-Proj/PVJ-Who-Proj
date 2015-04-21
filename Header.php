@@ -4,6 +4,12 @@ session_start(); //lancement de session
 
 include("Fonction.php"); //integration de la page de focntion
 
+if(isset($_GET['logout']))
+{
+	$_SESSION['connection'] = false;
+	$_SESSION['user'] = '';
+}
+
 try //appelle de BDD
 {
 	$pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
@@ -28,10 +34,58 @@ catch(Exception $e) //capture du message d'erreur en cas d'erreur
 		<header>
 			<img id="img_logo" src="Ressources/img/Logo_Guess_Who.png">
 			<?php
-			if(isset($_SESSION['connexion']) && $_SESSION['connexion'] == true) //test qui determine si un utilisateur est connecté ou non
+			if(isset($_SESSION['connection']) && $_SESSION['connection'] == true) //test qui determine si un utilisateur est connecté ou non
 			{
+				$reponse = $bdd->query("SELECT COUNT(login_user) AS nbTot
+										FROM user");
+				$nbUser = $reponse->fetch(); // requête SQL pour avoir le nombre total de joueur
+				$reponse->closeCursor();
+
+				$reponse = $bdd->prepare("SELECT nbWin_user, nbPlayed_user, ratio_user
+										  FROM user 
+										  WHERE login_user = :user");
+				$reponse->execute(array(
+					'user' => $_SESSION['user'])); //Requête SQL pour récuperer des info a afficher sur le jouer (ex: nb parties gagnées/jouées, ratio)
+				$info = $reponse->fetch();
+				$reponse->closeCursor();
+
+				$ratio = $info['ratio_user'];
+				$win = $info['nbWin_user'];
+
+				$reponse = $bdd->prepare("SELECT COUNT(login_user) AS classement
+										  FROM user 
+										  WHERE nbWin_user > :win");
+				$reponse->execute(array(
+					'win' => $win));
+				$classement = $reponse->fetch(); //Requête SQL pour avoir le classement actuel
+				$reponse->closeCursor();
+
+				$rank = $classement['classement'];
+
+				$reponse = $bdd->prepare("SELECT COUNT(login_user) AS classement
+										  FROM user 
+										  WHERE nbWin_user = :win AND ratio_user > :ratio");
+				$reponse->execute(array(
+					'win' => $win,
+					'ratio'=> $ratio));
+				$classementFin = $reponse->fetch(); //Requête SQL pour avoir le classement actuel
+				$reponse->closeCursor();
+
+				$rank += $classementFin['classement'] + 1;
 				?>
-				<a id="deco" href="deco.php"><img src="Ressources/img/yellow_logout_butt.png"></a>
+				<p id="dec">Welcome <?php echo $_SESSION['user']; ?></p>
+				<a id="deco" href="login.php?logout">
+					<img src="Ressources/img/logout.png"><img id="logoutHover" src="Ressources/img/logout_hover.png"><img id="logoutPush" src="Ressources/img/logout_push.png">
+				</a>
+
+				<aside>
+					<img src="Ressources/img/Aside.png">
+					<p>rank : <?php echo $rank; ?> / <?php echo $nbUser['nbTot']; ?></p>
+					<p>Played : <?php echo $info['nbPlayed_user']; ?></p>
+					<p>Win : <?php echo $info['nbWin_user']; ?></p>
+					<p>ratio : <?php echo $info['ratio_user']; ?></p>
+					<a href="">consult my profile</a>
+				</aside>
 				<?php
 			}
 			?>

@@ -1,20 +1,17 @@
 <?php
 include("Header.php");
-
-$_SESSION['mdp_correct'] = true;
-$_SESSION['login_pris'] =false;
-$_SESSION['id_juste'] = true;
 ?>
 
-<div class="welcome" id="background_before">
+<div class="welcome">
+	<img class="panneau" src="Ressources/img/Mmenu.png">
 	<div>
-		<ul class="liste_acceuil">
-			<a href="login.php"><li id="login_liste_acceuil">Login!</li></a>
-			<a href="creation_compte.php"><li>Create your own account!</li></a>
-			<a href="ranking.php"><li>Check ranking</li></a>
-			<a href="rules.php"><li>Read the rules here!</li></a>
+		<ul id="liAccueil">
+			<li id="login"><a href="login.php">Login</a></li>
+			<li><a href="inscription.php">Create account</a></li>
+			<li><a href="ranking.php">Check ranking</a></li>
+			<li><a href="rules.php">Game rules</a></li>
 		</ul>
-		<a class="back_butt" href="index.php"><img  src="Ressources/img/back.png"></a>
+		<a class="back" href="index.php"><img class="justBack" src="Ressources/img/back.png"><img class="backHover" src="Ressources/img/back_hover.png"><img class="backPush" src="Ressources/img/back_push.png"></a>
 	</div>
 </div>
 

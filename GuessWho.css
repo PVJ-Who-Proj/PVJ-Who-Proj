@@ -1,21 +1,34 @@
+html{
+	height: 100%;
+}
+
 body{
 	background-image: url(Ressources/img/Background2.png);
 	font-family: 'Lobster Two', cursive;
 	color: #B68750;
 	margin: 0px;
-}
-
-section{
-	height: auto;
-}
-
-.welcome{
-	background-image: url(Ressources/img/welcome.png);
-	width: 1081px;
-	height: 773px;
-	margin: auto;
+	min-height: 100%;
 	position: relative;
-	z-index: 2;
+}
+
+section:before{
+	height: 100%;
+}
+
+/************ scrollbar ************/
+
+::-webkit-scrollbar {
+    width: 2%;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 1vw;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 1vw;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 }
 
 /*****************************************************  header  ***********************************************************/
@@ -25,15 +38,77 @@ header #logo{
 }
 
 header #deco{
+	position: relative;
 	border-radius: 40px;
 	display: inline-block;
 	float:right;
-	margin-right: 50px;
+	margin-right: 220px;
 	margin-top: 10px;
 	cursor: pointer;
 }
 
-/*****************************************************  header  ***********************************************************/
+header #deco img{
+	position: absolute;
+}
+
+header #deco #logoutHover{
+	visibility: hidden;
+    opacity: 0;
+    -webkit-transition-property: visibility, opacity;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-property: visibility, opacity;
+    -moz-transition-duration: 0.5s;
+}
+
+header #deco:hover #logoutHover{
+    visibility: visible;
+    opacity: 1;
+}
+
+header #deco #logoutPush{
+	opacity: 0;
+}
+
+header #deco:active #logoutPush{
+	opacity: 1;
+}
+
+header #dec{
+	position: absolute;
+	right: 250px;
+	top: 10px;
+	margin-top: 14px;
+	font-weight: bold;
+	font-size: 30px;
+}
+
+header aside{
+	top: 30%;
+	position: absolute;
+	right: 0px;
+	display: inline-block;
+}
+
+header aside div{
+	position: relative;
+}
+
+header aside a, header aside p{
+	position: relative;
+	z-index: 2;
+	right: 2.5vw;
+	font-size: 1vw;
+	margin-top: 1vw;
+}
+
+header aside img{
+	position: absolute;
+	right: 0px;
+	z-index: 1;
+	width: 14vw;
+}
+
+/*****************************************************  footer  ***********************************************************/
 
 footer{
 	background-image: url(Ressources/img/sol.png);
@@ -47,7 +122,7 @@ footer p{
 	position: absolute;
 	color: #a16d35;
 	bottom: 0px;
-	margin-bottom: 5px;
+	margin-bottom: 4px;
 	margin-left: 30px;
 	font-size: 20px;
 	z-index: 1;
@@ -55,22 +130,38 @@ footer p{
 
 /*****************************************************  panneau de présentation  ***********************************************************/
 
+.welcome{
+	width: 56.5%;
+	max-height: 30%;
+	margin: auto;
+	position: relative;
+	z-index: 2;
+	font-size: 2.6vw;
+}
+
 .welcome #textHaut{
-	padding-top:150px;
-	margin-bottom: 150px;
+	padding-top: 15%;
+	margin-bottom: 15%;
+}
+
+.welcome .panneau{
+	position: absolute;
+	width: 92%;
+	margin-left: 3.7%;
 }
 
 .welcome p{
-	width: 92%;
+	width: 84%;
 	margin: auto;
 	text-align: center;
-	font-size: 55px;
+	position: relative;
 }
 
 .welcome div p{
 	text-align: left;
-	margin-left: 7.5%;
-	width: 820px;
+	margin-left: 12%;
+	width: 84%;
+	position: relative;
 }
 
 .welcome div{
@@ -80,236 +171,438 @@ footer p{
 
 .welcome #next{
 	float: right;
-	margin-right: 80px;
-	margin-top: -64px;
+	margin-right: 11%;
+	margin-top: -5.8%;
+	width: 6.8%;
+	height: 6.8%;
+	position: relative;
 }
 
 .welcome #next img{
 	box-shadow: 0 0 25px 2px #B68750;
-	border-radius: 40px;
+	border-radius: 50%;
+	width: 100%;
+	position: absolute;
 }
 
-.next:hover{
-	opacity: 0.5;
+.welcome #next #nextHover{
+	visibility: hidden;
+    opacity: 0;
+    -webkit-transition-property: visibility, opacity;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-property: visibility, opacity;
+    -moz-transition-duration: 0.5s;
 }
 
-.next_back_butt{
-	padding-left: 65px;
+.welcome #next:hover #nextHover{
+    visibility: visible;
+    opacity: 1;
+}
+
+.welcome #next #nextPush{
+	opacity: 0;
+}
+
+.welcome #next:active #nextPush{
+	opacity: 1;
 }
 
 /*****************************************************  accueil  ***********************************************************/
 
-.liste_acceuil{
+#liAccueil{
 	margin-top: 0px;
-	padding-top: 210px;
+	padding-top: 19.25%;
 	list-style-type: none;
 	text-align: center;
-	font-size: 55px;
+	font-size: 2.6vw;
+	margin-bottom: 1.5%;
+	padding-left: 5.24%;
 }
 
-.liste_acceuil a{
+#liAccueil li a{
 	display: inline-block;
-	margin: auto
+	margin: auto;
+	text-decoration: none;
+	color: #B68750;
+	width: 100%;
+	-webkit-transition-property: color;
+    -webkit-transition-duration: 1s;
+    -moz-transition-property: color;
+    -moz-transition-duration: 1s;
 }
 
-#login_liste_acceuil{
+#liAccueil #login{
 	border-top: 1px solid #B68750;
 }
 
-.liste_acceuil li{
-	padding: 15px 10px 15px 10px;
+#liAccueil li{
+	padding: 1.4% 2.08% 1.4% 2.08%;
 	border-bottom: solid 1px #B68750;
 	margin: auto;
-	width: 600px;
+	width: 57.4%;
+	position: relative;
+	cursor: pointer;
+	-webkit-transition-property: background-color;
+    -webkit-transition-duration: 1s;
+    -moz-transition-property: background-color;
+    -moz-transition-duration: 1s;
 }
 
-.liste_acceuil a{
-	text-decoration: none;
+#liAccueil li:hover{
+	background-color: #B68750;
+	color: #F8E8B0;
+}
+
+#liAccueil li:hover a{
+	color: #F8E8B0;	
+}
+
+.back{
+	float: left;
+	margin-left: 10%;
+	width: 6.8%;
+	height: 6.8%;
+	position: relative;
+}
+
+.back img{
+	box-shadow: 0 0 25px 2px #B68750;
+	border-radius: 50%;
+	width: 100%;
+	position: absolute;
+}
+
+.back .backHover{
+	visibility: hidden;
+    opacity: 0;
+    -webkit-transition-property: visibility, opacity;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-property: visibility, opacity;
+    -moz-transition-duration: 0.5s;
+}
+
+.back:hover .backHover{
+    visibility: visible;
+    opacity: 1;
+}
+
+.back .backPush{
+	opacity: 0;
+}
+
+.back:active .backPush{
+	opacity: 1;
+}
+
+/*****************************************************  Rules  ***********************************************************/
+
+#rules{
+	position: relative;
+	padding-top: 6%;
+	width: 88%;
+	padding-left: 7.5%;
+	font-size: 1.05vw;
+}
+
+#rules h3{
+	margin-top: 2.2%;
+	margin-bottom: 1.5%;
+}
+
+#rules #rWin{
+	width: 64.8%;
+}
+
+/*****************************************************  Login  ***********************************************************/
+
+#pLogin{
+	position: relative;
+	width: 100%;
+	padding-top: 9%;
+	font-size: 1.8vw;
+}
+
+#pLogin form input{
+	padding-left: 2%;
+	outline: none;
+	display: block;
+	background-color: transparent;
+	border-bottom: 1px solid #B68750;
+	border-radius: 1vw;
+	margin-bottom: 4%;
+	color: #B68750;
+	border: 1px solid #B68750;
+}
+
+#pLogin h2{
+	margin-left: 28.5%;
+}
+
+#pLogin div#log{
+	position: relative;
+	width: 100%;
+	margin-left: 39.6%;
+	margin-bottom: 5%;
+}
+
+#pLogin div#log img{
+	position: absolute;
+	width: 20%;
+}
+
+#pLogin input[type="submit"]{
+	box-shadow: 0 0 25px 2px #B68750;
+	position: absolute;
+	cursor: pointer;
+	width: 19.3%;
+	margin-left: 0.5%;
+	height: 3.48vw;
+	border: none;
+	z-index: 6;
+	border-radius: 1.2vw;
+}
+
+#pLogin .back{
+	margin-top: 5%;
+	margin-left: 28%;
+}
+
+#pLogin input[type="text"], #pLogin input[type="password"], #pLogin input[type="email"]{
+	font-size: 1.75vw;
+	margin-left: 26.5%;
+	height: 4.2vw;
+	width: 43.7%;
+	box-shadow: 0 0 15px 2px;
+}
+
+#pLogin input[type="text"]:focus, #pLogin input[type="password"]:focus, #pLogin input[type="email"]:focus{
+	background-color: #B68750;
+	color: #F8E8B0;
+}
+
+#pLogin input::-webkit-input-placeholder{
 	color: #B68750;
 }
 
-.liste_acceuil li:hover{
-	background-color: #B68750;
-	transition: 0.45s linear;
-}
-
-.liste_acceuil li:hover {
+#pLogin input:focus::-webkit-input-placeholder{
 	color: #F8E8B0;
-	transition: 0.45s linear;
 }
 
-.back_butt{
-	margin-left: 80px;
+#pLogin div #subHover{
+	visibility: hidden;
+    opacity: 0;
+    -webkit-transition-property: visibility, opacity;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-property: visibility, opacity;
+    -moz-transition-duration: 0.5s;
 }
 
-.back_butt img{
-	box-shadow: 0 0 25px 2px #B68750;
-	border-radius: 40px;
+#pLogin div:hover #subHover{
+    visibility: visible;
+    opacity: 1;
 }
 
-.back_butt:hover{
-	opacity: 0.5;
+#pLogin div #subPush{
+	opacity: 0;
 }
 
-.back_butt:hover img{
-	box-shadow: 0px 0px 0px 0px;
+#pLogin div:active #subPush{
+	opacity: 1;
 }
 
 /*****************************************************  Creation compte  ***********************************************************/
 
-.espace_login{
-	padding-top: 100px;
-	margin: auto;
-	font-size: 35px;
-}
-
-.new_compte{
-	margin: auto;
-	width: 472px;
-	margin-top: 20px;
-	padding-bottom: 0px;
-	padding-top: 114px;
-}
-
-.form_compte{
+#cCompte .welcome{
+	width: 62%;
 	margin: auto;
 }
 
-.title_login{
-	text-align: center;
+#nCompte{
+	position: relative;
+	width: 80%;
+	padding-top: 12%;
+	margin-left: 10%;
 }
 
-.form_compte input{
+#formCompte{
+	height: 100%;
+}
+
+#formCompte input{
 	margin: auto;
 	display: block;
-	background: none;
+	background: transparent;
 	border: 1px solid #B68750;
-	border-radius: 20px;
-	margin-bottom: 50px;
+	border-radius: 1vw;
+	margin-bottom: 4.6%;
 }
 
-.form_compte input[type="text"], input[type="password"], input[type="email"]{
-	padding-left: 20px;
+#formCompte input[type="text"], #formCompte input[type="password"], #formCompte input[type="email"]{
+	padding-left: 2%;
 	color: #B68750;
-	font-size: 35px;
-	height: 80px;
-	width: 480px;
+	font-size: 1.75vw;
+	height: 4.2vw;
+	width: 50%;
 	box-shadow: 0 0 15px 2px;
 }
 
-.form_compte input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus{
+#formCompte input[type="text"]:focus, #formCompte input[type="password"]:focus, #formCompte input[type="email"]:focus{
 	background-color: #B68750;
 	color: #F8E8B0;
 }
 
-input::-webkit-input-placeholder{
+#formCompte input::-webkit-input-placeholder{
 	color: #B68750;
 }
 
-input:focus::-webkit-input-placeholder{
-	color:#F8E8B0;
+#formCompte input:focus::-webkit-input-placeholder{
+	color: #F8E8B0;
 }
 
-.form_compte input[type="password"], input[type="email"], input[type="text"],  select{
+input::-moz-placeholder{
+	color: #8e5a1d;
+}
+
+input:focus::-moz-placeholder{
+	color: #ffeca8;
+}
+
+#formCompte input[type="password"], #formCompte input[type="email"], #formCompte input[type="text"],  select{
 	outline:none;
 }
 
-.form_compte input[type="submit"]{
+#formCompte input[type="submit"]{
+	box-shadow: 0 0 25px 2px #B68750;
+	position: absolute;
 	cursor: pointer;
-	width: 210px;
-	height: 70px;
+	width: 98%;
+	margin-left: 0.5%;
+	height: 3.48vw;
 	border: none;
+	z-index: 6;
+	border-radius: 1.2vw;
+	outline:none;
 }
 
-.form_creation_compte input[type="submit"]{
-	margin-left: 70px;
-	background: url("Ressources/img/create.png");
+#cCompte .back{
+	margin-left: 0%;
 }
 
-.form_login input[type="submit"]{
-	margin-left: 70px;
-	background: url("Ressources/img/login_butt.png");
-}
-
-.back_butt_login{
-	margin-left: 0px;
-}
-
-.back_butt_login:hover{
-	opacity: 0.5;
-}
-
-.back_butt_login img{
-	box-shadow: 0 0 25px 2px #B68750;
-	border-radius: 40px;
-}
-
-.back_butt_login:hover img{
-	box-shadow: 0px 0px 0px 0px;
-}
-
-.back_butt_block{
-	margin: auto;
-	height: 68px;
-	width: 360px;
-}
-
-.back_butt_block input{
+#nCompte div{
+	position: relative;
 	display: inline-block;
-	border-radius: 20px;
-	box-shadow: 0 0 25px 2px #B68750;
+	margin-bottom: 15%;
+	margin-left: 23.6%;
+	width: 22%;
 }
 
-.back_butt_block input:hover{
-	box-shadow: 0 0 0 0;
-	opacity: 0.5;
-	cursor:pointer;
+#nCompte div img{
+	width: 100%;
+	position: absolute;
+	z-index: 5;
+}
+
+#nCompte div #compteHover{
+	visibility: hidden;
+    opacity: 0;
+    -webkit-transition-property: visibility, opacity;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-property: visibility, opacity;
+    -moz-transition-duration: 0.5s;
+}
+
+#nCompte div:hover #compteHover{
+    visibility: visible;
+    opacity: 1;
+}
+
+#nCompte div #comptePush{
+	opacity: 0;
+}
+
+#nCompte div:active #comptePush{
+	opacity: 1;
 }
 
 /*****************************************************  mot de passe  ***********************************************************/
 
-.mauvais_mdp{
-	padding-top: 0px;
-	width: 500px;
-	margin: auto;
+#nCompte #error{
+	position: absolute;
+	margin-left: 3%;
+	width: 30%;
 	color: red;
-	font-size: 25px;
+	font-size: 1.1vw;
 }
 
-.mauvais_log{
-	padding-top: 10px;
+#errorLog{
+	padding-top: 2%;
 	color: red;
-	width: 380px;
+	width: 50%;
 	margin: auto;
+	font-size: 1.6vw;
+	margin-left: 30%;
 }
 
 /*****************************************************  Classement  ***********************************************************/
 
-.classement_tableau{
+#classement{
 	margin: auto;
-	padding-top: 100px
+	padding-top: 18%;
 }
 
-.haut_tableau{
-	font-size: 30px;
-	height: 90px;
+#entete{
+	font-size: 1.6vw;
+	height: auto;
+	position: absolute;
+	margin-top: -3.7vw;
 }
 
-.ligne_tableau{
-	font-size: 25px;
-	height: 50px;
+#entete th{
+	padding-bottom: 1.5vw;
 }
 
-.classement_tableau th{
-	width: 300px;
+.ligneTab{
+	font-size: 1.3vw;
+	height: 2.5vw;
+	position: relative;
+	padding-left: 2%;
 }
 
-.tableau{
-	height: 670px;
+#classement tbody{
+	display: inline-block;
+	height: 15.5vw;
+	overflow: auto;
+	margin-left: -1vw;
 }
 
-#back_rank{
-	margin-left: 70px;
+#classement{
+	display: inline-block;
+	text-align: center;
+}
+
+#classement th{
+	width: 10vw;
+}
+
+#tableau{
+	position: relative;
+	height: 6vw;
+	text-align: left;
+	padding-left: 3%;
+}
+
+#tableau .back{
+	margin-top: 5%;
+	width: 8%;
+}
+
+#tableau #classCach{
+	margin-top: 0px;
+}
+
+.back{	
+	margin-left: 30%;
+	margin-bottom: 1px;
 }
 
 /*****************************************************  Menu game  ***********************************************************/
@@ -417,32 +710,6 @@ input:focus::-webkit-input-placeholder{
 	text-decoration: none;
 	margin-top: 50px;
 	margin-left: 250px;
-}
-
-/*****************************************************  Rules  ***********************************************************/
-
-.butt_rules{
-	margin-left: 0px;
-}
-
-.butt_rules:hover{
-	opacity: 0.5;
-}
-
-.butt_rules img{
-	box-shadow: 0 0 25px 2px #B68750;
-	border-radius: 40px;
-}
-
-.butt_rules:hover img{
-	box-shadow: 0px 0px 0px 0px;
-}
-
-.back_butt_rules{
-	height: 68px;
-	width: 360px;
-	padding-left: 80px;
-	padding-top: 55px;
 }
 
 /*****************************************************  Create a game  ***********************************************************/
@@ -726,17 +993,4 @@ input[type="checkbox"]:checked + label::before{
 
 #background_join_games{
 	background-image: url(Ressources/img/join_game.png);
-}
-
-.centrerrulestop{
-	padding-top: 90px;
-	width:980px;
-	padding-left: 50px;
-	font-size: 20px;
-}
-
-.centrerrulesbot{
-	width:700px;
-	padding-left: 50px;
-	font-size: 20px;
 }
