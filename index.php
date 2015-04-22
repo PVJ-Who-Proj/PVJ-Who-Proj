@@ -3,7 +3,7 @@ include("Header.php");
 
 if(isset($_SESSION['connection']) && $_SESSION['connection'] == true) //si le joueur est connecté, il sera redirigé vers le menu de jeu
 {
-	header("Location: accueil_partie.php");
+	header("Location: accueilPartie.php");
 }
 ?>
 	<div class="welcome">
