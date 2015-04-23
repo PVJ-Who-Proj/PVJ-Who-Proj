@@ -1,5 +1,6 @@
 html{
 	height: 100%;
+	overflow-x: hidden;
 }
 
 body{
@@ -38,13 +39,14 @@ header #logo{
 }
 
 header #deco{
-	position: relative;
+	position: absolute;
 	border-radius: 40px;
 	display: inline-block;
-	float:right;
 	margin-right: 220px;
 	margin-top: 10px;
 	cursor: pointer;
+	right: 0px;
+	top: 0px;
 }
 
 header #deco img{
@@ -85,7 +87,7 @@ header #dec{
 header aside{
 	top: 30%;
 	position: absolute;
-	right: 0px;
+	right: 2px;
 	display: inline-block;
 }
 
@@ -185,7 +187,7 @@ footer p{
 	position: absolute;
 }
 
-.welcome #next #nextHover{
+.welcome #next #nextHover, .back .backHover, #pLogin div #subHover, #creation #gameHover{
 	visibility: hidden;
     opacity: 0;
     -webkit-transition-property: visibility, opacity;
@@ -194,16 +196,16 @@ footer p{
     -moz-transition-duration: 0.5s;
 }
 
-.welcome #next:hover #nextHover{
+.welcome #next:hover #nextHover, .back:hover .backHover, #pLogin div:hover #subHover, #creation:hover #gameHover{
     visibility: visible;
     opacity: 1;
 }
 
-.welcome #next #nextPush{
+.welcome #next #nextPush, .back .backPush, #pLogin div #subPush, #creation #gamePush{
 	opacity: 0;
 }
 
-.welcome #next:active #nextPush{
+.welcome #next:active #nextPush, .back:active .backPush, #pLogin div:active #subPush, #creation:active #gamePush{
 	opacity: 1;
 }
 
@@ -270,28 +272,6 @@ footer p{
 	border-radius: 50%;
 	width: 100%;
 	position: absolute;
-}
-
-.back .backHover{
-	visibility: hidden;
-    opacity: 0;
-    -webkit-transition-property: visibility, opacity;
-    -webkit-transition-duration: 0.5s;
-    -moz-transition-property: visibility, opacity;
-    -moz-transition-duration: 0.5s;
-}
-
-.back:hover .backHover{
-    visibility: visible;
-    opacity: 1;
-}
-
-.back .backPush{
-	opacity: 0;
-}
-
-.back:active .backPush{
-	opacity: 1;
 }
 
 /*****************************************************  Rules  ***********************************************************/
@@ -389,28 +369,6 @@ footer p{
 	color: #F8E8B0;
 }
 
-#pLogin div #subHover{
-	visibility: hidden;
-    opacity: 0;
-    -webkit-transition-property: visibility, opacity;
-    -webkit-transition-duration: 0.5s;
-    -moz-transition-property: visibility, opacity;
-    -moz-transition-duration: 0.5s;
-}
-
-#pLogin div:hover #subHover{
-    visibility: visible;
-    opacity: 1;
-}
-
-#pLogin div #subPush{
-	opacity: 0;
-}
-
-#pLogin div:active #subPush{
-	opacity: 1;
-}
-
 /*****************************************************  Creation compte  ***********************************************************/
 
 #cCompte .welcome{
@@ -469,7 +427,7 @@ input:focus::-moz-placeholder{
 }
 
 #formCompte input[type="password"], #formCompte input[type="email"], #formCompte input[type="text"],  select{
-	outline:none;
+	outline: none;
 }
 
 #formCompte input[type="submit"]{
@@ -482,7 +440,7 @@ input:focus::-moz-placeholder{
 	border: none;
 	z-index: 6;
 	border-radius: 1.2vw;
-	outline:none;
+	outline: none;
 }
 
 #cCompte .back{
@@ -608,7 +566,7 @@ input:focus::-moz-placeholder{
 
 /*****************************************************  Menu game  ***********************************************************/
 
-#Mmenu .welcome .panneau{
+#Mmenu .welcome .panneau, #createGame .welcome .panneau{
 	width: 55vw;
 	margin-left: 0px;
 }
@@ -672,7 +630,7 @@ input:focus::-moz-placeholder{
 }
 
 #taillecube2{
-	float:right;
+	float: right;
 	margin-right: 4.4%;
 }
 
@@ -692,80 +650,101 @@ input:focus::-moz-placeholder{
 
 /*****************************************************  Create a game  ***********************************************************/
 
-.create_game input[type="text"]{
+#createGame #create input[type="text"]{
+	position: absolute;
+	margin-top: 14%;
+	margin-left: 25.6%;
 	display: block;
-	padding-left: 20px;
 	color: #B68750;
-	font-size: 35px;
-	height: 80px;
-	width: 480px;
+	font-size: 1.8vw;
+	height: 4vw;
+	width: 45%;
 	box-shadow: 0 0 15px 2px;
 	background: none;
 	border: 1px solid #B68750;
-	border-radius: 20px;
+	border-radius: 1vw;
+	outline: none;
+	text-align: center;
 }
 
-.create_game input[type="text"], select{
-	outline:none;
-}
-
-.create_game input[type="text"]:focus{
+#createGame #create input[type="text"]:focus{
 	background-color: #B68750;
 	color: #F8E8B0;
 }
 
-.create_game_checkbox{
-	margin-top: 50px;
-	margin-left: 40px;
+#createGame #create input::-webkit-input-placeholder{
+	color: #B68750;
+}
+
+#createGame #create input:focus::-webkit-input-placeholder{
+	color: #F8E8B0;
+}
+
+#radio{
+	width: 40%;
+	margin-top: 30%;
+	margin-left: 30.5%;
 	position: relative;
+	margin-bottom: 8%;
 }
 
-.create_game input[type="checkbox"]{
-	display:none;
+#createGame #create input[type="radio"]{
+	display: none;
+} 
+
+#createGame #create label{
+	cursor: pointer;
+	font-size: 4vw
 }
 
-input[type="checkbox"] + label::before{
-	cursor:pointer;
-	display:inline-block;
-	content:"";
-	width:50px;
-	height:50px;
-	background: #F8E8B0;
-	border-radius: 10px;
-	border: 1px solid #B68750;
-	transition: all 0.2s ease-in-out;
-}
-
-input[type="checkbox"]:checked + label::before{
-	background: #B68750;
-	content:"";
-	color:#F8E8B0;
-	width:50px;
-	height:50px;
-}
-
-.zonebas_creategame{
-	margin-top: 50px;
-}
-
-.zone_fond_create_game{
-	width:500px;
-	padding-top: 180px;
-	margin:auto;
-}
-
-.butt_create_game{
-	background: url("Ressources/img/create_game_butt.png");
-	width: 210px;
-	height: 69px;
-	border-radius: 40px;
-	border: none;
+input[type="radio"] + label::before{
+	cursor: pointer;
 	display: inline-block;
-	margin-left: 50px;
+	content: "";
+	width: 12%;
+	height: 2.65vw;
+	background: #F8E8B0;
+	border-radius: 0.5vw;
+	border: 1px solid #B68750;
+	-webkit-transition-property: color, background-color;
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-property: color, background-color;
+    -moz-transition-duration: 0.5s;
 }
 
-.zone_bas_create_game{
-	margin-top: 60px;
+input[type="radio"]:checked + label::before{
+	background: #B68750;
+	color:#F8E8B0;
+}
+
+#create .back{
+	margin-left: 27%;
+}
+
+#create #creation{
+	position: relative;
+	display: inline-block;
+	margin-left: 18%;
+	width: 19%;
+	height: 3.5vw;
+}
+
+#create #creation input{
+	height: 100%;
+	border-radius: 1vw;
+	border: none;
+	background: none;
+	z-index: 5;
+	cursor: pointer;
+}
+
+#create #creation input:focus{
+	outline: none;
+}
+
+#create #creation input, #create #creation img{
+	position: absolute;
+	width: 100%;
 }
 
 /*****************************************************  rejoindre jeu  ***********************************************************/

@@ -1,11 +1,12 @@
 <?php
 include("Header.php");
 ?>
+
 <div id="Mmenu">
 	<div class="welcome">
 		<img class="panneau" src="Ressources/img/Menu.png">
 		<div id="entour_menu">
-			<a class="create_game" href="create_game.php">Create a game</a>
+			<a class="create_game" href="createGame.php">Create a game</a>
 			<a id="taillecube" href="">
 				<p>My<br>previous<br>games</p>
 			</a>

@@ -3,27 +3,14 @@ include("Header.php");
 $id_game = $_GET['id_game'];
 $login_user = $_SESSION['login_user'];
 $prenom_pers_joueur = "";
-$reponse = $bdd->query("SELECT id_joueur1, id_joueur2, question_posee_joueur1, question_posee_joueur2 FROM game WHERE id_game = '$id_game' ");
+$reponse = $bdd->query("SELECT id_joueur1, id_joueur2 FROM game WHERE id_game = '$id_game' ");
 $donnees = $reponse->fetch();
-
-if($login_user == $donnees['id_joueur1'])
-{
-	$num = $donnees['question_posee_joueur2'];
-}
-else
-{
-	$num = $donnees['question_posee_joueur1'];
-}
-
-if($num == 0)
-{
-	?>
-	<div class="background_personnage">
+?>
+<div class="background_personnage">
 	<div class="encadre_personnage">
 		<?php
 		if($donnees['id_joueur1'] == $login_user)
 		{
-
 			$joueur_adverse = $donnees['id_joueur2'];
 			$reponse = $bdd->query("SELECT * FROM pnj WHERE id_game = '$id_game' AND id_user = '$joueur_adverse' "); //affiche la palette de personnage du joueur adverse
 			include("affiche_personnage.php");
@@ -31,19 +18,6 @@ if($num == 0)
 			$donnees = $reponse->fetch();
 			$prenom_pers_joueur = $donnees['prenom_pers_joueur1'];
 			$reponse = $bdd -> query("SELECT * FROM pnj WHERE id_user = '$login_user' AND nom = '$prenom_pers_joueur' "); //affiche ce personnage
-			$reponse2 = $bdd->query("SELECT question_joueur2, reponse_joueur2, type_question_joueur1 FROM game WHERE id_game = '$id_game' ");
-			$donnees2 = $reponse2->fetch();
-			if($donnees2['type_question_joueur1'] <> "")
-			{
-			$type_question = $donnees2['type_question_joueur1'];
-			include("elim_pers.php");
-			echo('The question that you asked to your opponent was: ');
-			echo($donnees2['question_joueur2']);
-			echo(', and the answer that he gave is ');
-			echo($donnees2['reponse_joueur2']);
-			$bdd->query("UPDATE game SET question_joueur2 = '' WHERE id_game='$id_game' ");
-			$bdd->query("UPDATE game SET type_question_joueur2 = '' WHERE id_game='$id_game' ");
-			}
 			
 			
 		}
@@ -56,27 +30,10 @@ if($num == 0)
 			$donnees = $reponse->fetch();
 			$prenom_pers_joueur = $donnees['prenom_pers_joueur2'];
 			$reponse = $bdd -> query("SELECT * FROM pnj WHERE id_user = '$login_user' AND nom = '$prenom_pers_joueur' ");
-			$reponse2 = $bdd->query("SELECT question_joueur1, reponse_joueur1, type_question_joueur2 FROM game WHERE id_game = '$id_game' ");
-			$donnees2 = $reponse2->fetch();
-			if($donnees2['type_question_joueur2'] <> "")
-			{
-			$type_question = $donnees2['type_question_joueur2'];
-			include("elim_pers.php");
-			echo('The question that you asked to your opponent was: ');
-			echo($donnees2['question_joueur2']);
-			echo(', and the answer that he gave is ');
-			echo($donnees2['reponse_joueur2']);
-			$bdd->query("UPDATE game SET question_joueur1 = '' WHERE id_game='$id_game' ");
-			$bdd->query("UPDATE game SET type_question_joueur1 = '' WHERE id_game='$id_game' ");
-			}
 			
 			
 		}
-
-
 		?>
-
-		
 			 <div class="pers_joueur">
 			 <p>Your opponent has to find this person!</p> <?php
 			include("affiche_personnage.php");
@@ -88,7 +45,7 @@ if($num == 0)
 			if($donnees['AuTourDe'] == $login_user)
 			{
 				?><form class="question" action = "game_play_inter.php" method="POST">
-				<input type="hidden" name = "id_game" value = <?php echo($id_game); ?>>
+				<input type="hidden" name = "game_title" value = <?php echo($id_game); ?>>
 				<p> Questions you can ask to your opponent!</p>
 				<div class="body_qestion">
 					<p> Body questions </p>
@@ -126,17 +83,5 @@ if($num == 0)
 
 	</div>
 	<a class="back_butt_login" id="back_gameplay" href="running_games.php"><img  src="Ressources/img/back.png"></a>
-	</div>
-		<?php
-}
-
-
-else
-{
-	Header("Location: reponse_question.php?id_game=$id_game");
-}
-?>
-
-
-
+</div>
 
