@@ -17,13 +17,21 @@ else
 
 
 
-$req = $bdd->prepare('INSERT INTO game(game_title, type_game, statut_game, id_joueur1, id_joueur2) VALUES(:game_title, :type_game, :statut_game, :id_joueur1, :id_joueur2)');
+$req = $bdd->prepare('INSERT INTO game(game_title, type_game, statut_game, id_joueur1, id_joueur2,type_question_joueur1, question_posee_joueur1, question_joueur1, reponse_joueur1, type_question_joueur2, question_joueur2, reponse_joueur2, question_posee_joueur2) VALUES(:game_title, :type_game, :statut_game, :id_joueur1, :id_joueur2, :type_question_joueur1, :question_posee_joueur1, :question_joueur1, :reponse_joueur1, :type_question_joueur2, :question_joueur2, :reponse_joueur2, :question_posee_joueur2)');
 	$req->execute(array(
 		'game_title' => $game_title,
 		'type_game' => $type_game,
 		'statut_game' => false,
 		'id_joueur1' => $login_user,
-		'id_joueur2' => $id_joueur2
+		'id_joueur2' => $id_joueur2,
+		'type_question_joueur1' => "",
+		'question_posee_joueur1' => 0,
+		'question_joueur1' => "",
+		'reponse_joueur1' =>"",
+		'type_question_joueur2' => "",
+		'question_joueur2' => "",
+		'reponse_joueur2' => "",
+		'question_posee_joueur2' => 0
 		));
 
 
