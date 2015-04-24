@@ -33,9 +33,10 @@ if(isset($_POST['gameTitle']) && $_POST['gameTitle'] != "" && $_POST['typeGame']
 	$reponse->execute(array(
 		'game_title' => $gameTitle));
 	$donnees = $reponse->fetch();
+	$_SESSION['id_game'] = $donnees['ID_game'];
 	$reponse->closeCursor();
 
-	//header("Location: creationPersonnage.php");
+	header("Location: creationPersonnage.php");
 }
 ?>
 

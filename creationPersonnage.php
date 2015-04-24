@@ -2,8 +2,8 @@
 session_start();
 include("bdd.php");
 
-$id_game = $_GET['id_game'];
-$id_user = $_GET['id_user'];
+$id_game = $_SESSION['id_game'];
+$id_user = $_SESSION['user'];
 $num_pers_joueur = rand(0,23);
 
 for($i = 0; $i < 24; $i++)
@@ -214,7 +214,7 @@ while($donnees = $reponse->fetch())
 {
 	if($donnees['id_joueur2'] == "")
 	{
-		header("Location: accueil_partie.php");
+		header("Location: accueilPartie.php");
 	}
 	else
 	{
