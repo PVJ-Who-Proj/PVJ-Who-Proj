@@ -13,7 +13,7 @@ $bdd->query("UPDATE game SET id_joueur2 = '$id_joueur2' WHERE game_title = '$gam
 $bdd->query("UPDATE game SET statut_game = 1 WHERE game_title = '$game_title' ");
 $bdd->query("UPDATE game SET AuTourDe = '$id_joueur2' WHERE game_title = '$game_title' ");
 
-	header("Location: creation_personnage.php?id_user=$id_joueur2&id_game=$id_game");
+	header("Location: creationPersonnage.php?id_user=$id_joueur2&id_game=$id_game");
 
 ?>
 

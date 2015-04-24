@@ -5,7 +5,7 @@ if(isset($_POST['gameTitle']) && $_POST['gameTitle'] != "" && $_POST['typeGame']
 {
 	$gameTitle = $_POST['gameTitle'];
 	$typeGame = $_POST['typeGame'];
-	$login = $_SESSION['user'];
+	$login = $_SESSION['login_user'];
 
 	if($typeGame == "Computer")
 	{
@@ -16,14 +16,22 @@ if(isset($_POST['gameTitle']) && $_POST['gameTitle'] != "" && $_POST['typeGame']
 		$id_joueur2 = "";
 	}
 
-	$req = $bdd->prepare('INSERT INTO game(game_title, type_game, statut_game, id_joueur1, id_joueur2) 
-						  VALUES(:game_title, :type_game, :statut_game, :id_joueur1, :id_joueur2)');
+	$req = $bdd->prepare('INSERT INTO game(game_title, type_game, statut_game, id_joueur1, id_joueur2,type_question_joueur1, question_posee_joueur1, question_joueur1, reponse_joueur1, type_question_joueur2, question_joueur2, reponse_joueur2, question_posee_joueur2) 
+						  VALUES(:game_title, :type_game, :statut_game, :id_joueur1, :id_joueur2, :type_question_joueur1, :question_posee_joueur1, :question_joueur1, :reponse_joueur1, :type_question_joueur2, :question_joueur2, :reponse_joueur2, :question_posee_joueur2)');
 	$req->execute(array(
 		'game_title' => $gameTitle,
 		'type_game' => $typeGame,
 		'statut_game' => false,
 		'id_joueur1' => $login,
-		'id_joueur2' => $id_joueur2
+		'id_joueur2' => $id_joueur2,
+		'type_question_joueur1' => "",
+		'question_posee_joueur1' => 0,
+		'question_joueur1' => "",
+		'reponse_joueur1' =>"",
+		'type_question_joueur2' => "",
+		'question_joueur2' => "",
+		'reponse_joueur2' => "",
+		'question_posee_joueur2' => 0
 		));
 	$req->closeCursor();
 
@@ -36,7 +44,11 @@ if(isset($_POST['gameTitle']) && $_POST['gameTitle'] != "" && $_POST['typeGame']
 	$_SESSION['id_game'] = $donnees['ID_game'];
 	$reponse->closeCursor();
 
+<<<<<<< HEAD
 	header("Location: creationPersonnage.php");
+=======
+	header("Location: creationPersonnage.php?id_user=$donnees[id_joueur1]&id_game=$donnees[ID_game]&game_title=$game_title");
+>>>>>>> origin/master
 }
 ?>
 
