@@ -39,6 +39,7 @@ if(isset($_POST['username']) && $_POST['username'] != '' && $_POST['pass'] != ''
 				'base' => "*N.R.*"));
 			$req->closeCursor();
 			$_SESSION['connection'] = true; // set connect true
+			$_SESSION['login_user'] = $login;
 
 			header("Location: accueilPartie.php"); //redirection
 		}

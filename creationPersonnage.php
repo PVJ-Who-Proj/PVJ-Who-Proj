@@ -18,22 +18,16 @@ for($i = 0; $i < 24; $i++)
 	$couleur_haut = null;
 	$yeux = null;
 	
-
-
-
 	$type_yeux = rand(1,7);
 	$yeux = "oeils".$type_yeux;
-
 
 	$tab_couleur_poils = array('noir', 'gris', 'orange', 'blond' );  //couleur des poils
 	$num_couleur_poils = array_rand($tab_couleur_poils, 1);
 	$couleur_poils = $tab_couleur_poils[$num_couleur_poils];
 
-
 	$tab_couleur_haut = array('noir', 'rouge', 'bleu', 'gris', 'vert', 'orange');				//couleur du haut
 	$num_couleur_haut = array_rand($tab_couleur_haut, 1);
 	$couleur_haut = $tab_couleur_haut[$num_couleur_haut];
-
 
 	$sex_cara = rand(0,1);
 	$num_couleur_peau = rand(0,1);
@@ -63,7 +57,7 @@ for($i = 0; $i < 24; $i++)
 	if($sex_cara == 0)
 	{
 		$sexe = "homme";
-		$tab_prenom_homme = array('Léo', 'Paul', 'Antoine', 'Alexandre', 'Jonathan', 'Vincent', 'Pierre', 'Bastien', 'Florent', 'Rémi', 'Alexandre', 'Quentin', 'Alexis', 'Mael', 'Maxence', 'Timéo', 'Nolan', 'Sascha', 'Valentin', 'Romain', 'Mohamed', 'Rayan', 'Abdel', 'Edwin');
+		$tab_prenom_homme = array('Léo', 'Paul', 'Antoine', 'Alexandre', 'Jonathan', 'Vincent', 'Pierre', 'Bastien', 'Florent', 'Rémi', 'Quentin', 'Alexis', 'Mael', 'Maxence', 'Timéo', 'Nolan', 'Sascha', 'Valentin', 'Romain', 'Mohamed', 'Rayan', 'Abdel', 'Edwin');
 		$nom = $tab_prenom_homme[$i];
 
 		if($avoir_lunette == 1)
@@ -148,19 +142,7 @@ for($i = 0; $i < 24; $i++)
 		$type_haut = $tab_type_haut[$num_type_haut];
 
 		$haut = $type_haut."_".$couleur_haut;
-
-
-
-
-
 	}
-
-			
-
-
-
-
-
 
 	$req = $bdd->prepare('INSERT INTO pnj(id_game, id_user, nom, sexe, peau, couleur_poil, statut_character, barbe, moustache, couleur_haut, haut, cheveux, collier, lunette, yeux) VALUES (:id_game, :id_user, :nom, :sexe, :peau, :couleur_poil, :statut_character, :barbe, :moustache, :couleur_haut, :haut, :cheveux, :collier, :lunette, :yeux)');
 	$req->execute(array(
@@ -180,14 +162,6 @@ for($i = 0; $i < 24; $i++)
 			"lunette" => $lunette,
 			"yeux" => $yeux
 			));
-
-
-
-
-
-
-
-
 	
 	if($i == $num_pers_joueur)
 	{
@@ -200,13 +174,8 @@ for($i = 0; $i < 24; $i++)
 			else
 			{
 				$req2 = $bdd ->query("UPDATE game SET prenom_pers_joueur2 = '$nom'  WHERE id_game = '$id_game' ");
-			}
-		
+			}	
 	}
-
-
-
-
 }
 
 $reponse = $bdd->query("SELECT id_joueur2 FROM game WHERE id_game = '$id_game' ");
@@ -214,7 +183,7 @@ while($donnees = $reponse->fetch())
 {
 	if($donnees['id_joueur2'] == "")
 	{
-		header("Location: accueil_partie.php");
+		header("Location: accueilPartie.php");
 	}
 	else
 	{

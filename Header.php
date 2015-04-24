@@ -7,19 +7,10 @@ include("Fonction.php"); //integration de la page de focntion
 if(isset($_GET['logout']))
 {
 	$_SESSION['connection'] = false;
-	$_SESSION['user'] = '';
+	$_SESSION['login_user'] = '';
 }
 
-try //appelle de BDD
-{
-	$pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
-	$bdd = new PDO('mysql:host=localhost;dbname=guesswho','root', '', $pdo_options);
-
-}
-catch(Exception $e) //capture du message d'erreur en cas d'erreur
-{
-	die('Error: '.$e->getMessage());
-}
+include("bdd.php");
 
 ?>
 <html>
@@ -45,7 +36,7 @@ catch(Exception $e) //capture du message d'erreur en cas d'erreur
 										  FROM user 
 										  WHERE login_user = :user");
 				$reponse->execute(array(
-					'user' => $_SESSION['user'])); //Requête SQL pour récuperer des info a afficher sur le jouer (ex: nb parties gagnées/jouées, ratio)
+					'user' => $_SESSION['login_user'])); //Requête SQL pour récuperer des info a afficher sur le jouer (ex: nb parties gagnées/jouées, ratio)
 				$info = $reponse->fetch();
 				$reponse->closeCursor();
 
@@ -73,7 +64,7 @@ catch(Exception $e) //capture du message d'erreur en cas d'erreur
 
 				$rank += $classementFin['classement'] + 1;
 				?>
-				<p id="dec">Welcome <?php echo $_SESSION['user']; ?></p>
+				<p id="dec">Welcome <?php echo $_SESSION['login_user']; ?></p>
 				<a id="deco" href="login.php?logout">
 					<img src="Ressources/img/logout.png"><img id="logoutHover" src="Ressources/img/logout_hover.png"><img id="logoutPush" src="Ressources/img/logout_push.png">
 				</a>

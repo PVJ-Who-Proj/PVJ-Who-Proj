@@ -22,7 +22,7 @@ if(isset($_POST['login']) && $_POST['login'] != '' && $_POST['password'] != '') 
 		if($pass == $user['password_user'])
 		{
 			$_SESSION['connection'] = true; // si le test est un succès, on a connexion
-			$_SESSION['user'] = $user['login_user']; // SESSION qui permettra de reperer quel joueur est connecté
+			$_SESSION['login_user'] = $user['login_user']; // SESSION qui permettra de reperer quel joueur est connecté
 			header('Location: accueilPartie.php'); // redirection vers le menu de jeu
 		}
 		else
